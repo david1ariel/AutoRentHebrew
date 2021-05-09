@@ -1,0 +1,59 @@
+
+.login-container{
+  position: relative;
+  box-sizing: border-box;
+  font-family: Alata;
+  min-width: 550px;
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(13, 11, 14);
+  margin: auto;
+  margin-top: 40px;
+  color: rgb(199, 188, 186);
+  padding: 20px;
+}
+
+.headline{
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.form{
+  position: relative;
+  background-color: rgb(13, 11, 14);
+  padding: 30px;
+}
+
+td{
+  font-size: large;
+  min-width: 150px;
+  margin-right: 40px;
+  padding-top: 20px;
+}
+
+input[type=text], input[type=password]{
+  border-radius: 8px;
+  width: 150px;
+  background-color: rgb(199, 188, 186);
+  color: rgb(13, 11, 14);
+}
+span{
+  color: rgb(199, 188, 186);
+  margin: 20px;
+  color: rgba(221, 13, 117, 0.87);
+}
+
+.btn-login{
+  color:rgb(13, 11, 14);
+  background-color: rgb(199, 188, 186);
+  grid-column: span 8;
+  width: 120px;
+  height: 40px;
+  margin: auto;
+  margin-top: 40px;
+  cursor: pointer;
+  display: block;
+}
+
+

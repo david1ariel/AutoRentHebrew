@@ -1,0 +1,234 @@
+<div class="cars-container" *ngIf="carTypes">
+
+  <div class="headline">
+    <h2>CARS FLEET</h2>
+    <h4>(CLICK ANY PROPERTY TO EDIT)</h4>
+  </div>
+  <div class="cars-table">
+    <table>
+      <thead>
+
+        <tr class="tr-head">
+          <th>Image</th>
+          <th>Manufacturer</th>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Gear Type</th>
+          <th>Price Per Day</th>
+          <th>Price Per Day Late</th>
+          <th></th>
+          <th></th>
+        </tr>
+
+      </thead>
+      <tbody *ngFor="let c of carTypes; let i = index">
+
+        <tr style="background-color: rgb(55, 64, 35);">
+          <td>
+
+            <input type="file" #imageBox class="file-input" (change)="changeImage($event.target.files[0], i)">
+            <img [src]="tempCarTypesImagesAsStrings[i]" (click)="imageBox.click()" class="car-imgae">
+          </td>
+          <td>
+            <input type="text" class="exist-car-input" [(ngModel)]="c.manufacturer">
+          </td>
+          <td>
+            <input class="exist-car-input" type="text" [(ngModel)]="c.model">
+          </td>
+          <td>
+            <input type="number" min="1900" max="2099" step="1" value="{{c.year}}" [(ngModel)]="c.year" >
+          </td>
+          <td>
+            <input class="exist-car-input" type="text" [(ngModel)]="c.gear">
+          </td>
+          <td>
+            <input class="exist-car-input" type="number" [(ngModel)]="c.pricePerDay">
+          </td>
+          <td>
+            <input class="exist-car-input" type="number" [(ngModel)]="c.pricePerDayLate">
+          </td>
+          <td>
+            <button class="btn btn-success" (click)="UpdateCarType(i, succeeded, failed)">UPDATE</button>
+          </td>
+          <td>
+            <button class="btn btn-danger" (click)="cancelCarTypeEdit(i)">CANCEL</button>
+          </td>
+        </tr>
+
+        <tr class="tr-manage" style="background-color: rgb(28, 41, 32);" (click)="openCarsTable(i)">
+          MANAGE CARS OF THIS TYPE
+        </tr>
+
+        <tr *ngIf="opened && index===i && cars.length>0" style="background-color: rgb(199, 188, 186);margin: auto;">
+          <th>Vehicle License Number</th>
+          <th>KM</th>
+          <th>Fixed & Ready</th>
+          <th>Available Now</th>
+          <th>Branch</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+
+        <tr *ngIf="opened && index===i && cars.length===0" style="background-color: rgb(13, 11, 14);margin: auto;"
+          class="no-cars">
+          There are no cars for this type for now</tr>
+        <ng-container *ngIf="index===i && cars && opened" style="margin: auto;">
+          <tr *ngFor="let car of cars; let j = index" class="tr-add-car" style="margin: auto; height: 45px;"
+            [ngStyle]="{'background-color' : j%2==0 ? 'rgb(65, 80, 99)' : 'rgb(35, 44, 54)'}">
+            <td (click)="unchanged()">
+              {{car.carId}}
+            </td>
+            <td>
+              <input class="exist-car-input" type="number" [(ngModel)]="car.km">
+            </td>
+            <td>
+              <select class="exist-car-input" name="isFixed" id="isFixed" [(ngModel)]="car.isFixed">
+                <option [ngValue]="true">Yes</option>
+                <option [ngValue]="false">No</option>
+              </select>
+            </td>
+            <td>{{car.isAvailable | yesNo}}</td>
+            <td>
+              <select class="exist-car-input" name="branches" id="branches" [(ngModel)]="car.branch">
+                <option *ngFor="let b of branches; let i = index" [attr.value]="b.name"
+                  [attr.selected]="b.name == b.name ? true : null">{{b.name}}</option>
+              </select>
+            </td>
+            <td>
+              <button class="btn btn-success" (click)="initBooksModel(car)" routerLink="/admin/dashboard/edit-availabilities/{{car.carId}}">BOOKS</button>
+            </td>
+            <td>
+              <button class="btn btn-success" (click)="UpdateCar(car, succeeded, failed)">UPDATE</button>
+            </td>
+            <td>
+              <button class="btn btn-danger" (click)="cancelCarEdit(car)">CANCEL</button>
+            </td>
+
+          </tr>
+          <tr style="width: 840px;" class="headline">Add New Car:</tr>
+
+          <table>
+            <thead>
+              <tr class="tr-head" style="width: 840px;">
+                <th>Vehicle License Number*</th>
+                <th>KM*</th>
+                <th>Fixed & Ready*</th>
+                <th>Branch*</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tr-add-car" style="background-color: rgb(65, 80, 99);margin: auto;width: 840px;">
+              <td>
+                <input  type="text" [(ngModel)]="carToAdd.carId">
+              </td>
+              <td>
+                <input  type="number" [(ngModel)]="carToAdd.km">
+              </td>
+              <td>
+                <select style="background-color: inherit;" name="isFixed" [(ngModel)]="carToAdd.isFixed">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </td>
+              <td>
+                <select style="background-color: inherit;" name="branches" [(ngModel)]="carToAdd.branch">
+                  <option *ngFor="let b of branches; let i = index" [attr.value]="b.name">{{b.name}}</option>
+                </select>
+              </td>
+              <td>
+                <button class="btn btn-success" (click)="addNewCar(c, succeeded, failed)">ADD</button>
+              </td>
+              <td>
+                <button class="btn btn-danger" (click)="clearCarEdit()">CLEAR</button>
+              </td>
+              </tr>
+            </tbody>
+          </table>
+        </ng-container>
+
+      </tbody>
+    </table>
+
+    <h5 class="headline">Add New Car Type:</h5>
+    <table>
+      <thead>
+        <tr class="tr-head">
+          <th>Image*</th>
+          <th>Manufacturer*</th>
+          <th>Model*</th>
+          <th>Year*</th>
+          <th>Gear Type*</th>
+          <th>Price Per Day*</th>
+          <th>Price Per Day Late*</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="tr-add" style="background-color: rgb(55, 64, 35);">
+          <td style="padding: 10px;">
+            <img [src]="preview" alt="" *ngIf="carTypeToAdd.image" (click)="imageBox.click()">
+            <input type="file" #imageBox class="file-input" (change)="displayNewCarPreview($event.target.files[0])">
+            <button *ngIf="!carTypeToAdd.image" class="btn btn-primary" type="button" (click)="imageBox.click()">Upload
+              Image...</button>
+            <br>
+            <img [src]=carTypeToAdd.imageFileName class="car-imgae">
+          </td>
+          <td>
+            <input type="text" placeholder="Manufacturer" [(ngModel)]="carTypeToAdd.manufacturer">
+          </td>
+          <td>
+            <input type="text" placeholder="model" [(ngModel)]="carTypeToAdd.model">
+          </td>
+          <td>
+            <input type="number" min="1900" max="2099" step="1" value="{{carTypeToAdd.year}}" [(ngModel)]="carTypeToAdd.year">
+          </td>
+          <td>
+            <input type="text" placeholder="gear" [(ngModel)]="carTypeToAdd.gear">
+          </td>
+          <td>
+            <input type="number" placeholder="price Per Day" [(ngModel)]="carTypeToAdd.pricePerDay">
+          </td>
+          <td>
+            <input type="number" placeholder="price Per Day Late" [(ngModel)]="carTypeToAdd.pricePerDayLate">
+
+          </td>
+          <td>
+            <button class="btn btn-success" (click)="addNewCarType(succeeded, failed)">ADD</button>
+          </td>
+          <td>
+            <button class="btn btn-danger" (click)="clearCarTypeEdit()">CLEAR</button>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+
+
+
+  </div>
+</div>
+
+<ng-template #succeeded>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>Process ended successfuly!</h4>
+    <div>
+      <button class="btn btn-success" (click)="onCloseDialog()">OK</button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #failed>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>Sorry, but some error occured.</h4>
+    <div>
+      <button class="btn btn-success" (click)="onCloseDialog()">OK</button>
+    </div>
+  </div>
+</ng-template>

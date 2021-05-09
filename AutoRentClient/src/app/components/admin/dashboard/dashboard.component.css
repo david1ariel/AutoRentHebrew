@@ -1,0 +1,79 @@
+.dashboard-container {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* margin: 20px; */
+    text-align: center;
+}
+
+.headline{
+    font-family: Alata;
+    color:  rgb(13, 11, 14);
+    cursor: pointer;
+    width: 100%;
+    background-color:  rgb(199, 188, 186);
+    grid-column: span 12;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+
+}
+
+h1{
+  margin: 37px;
+}
+
+.nav-container{
+  text-align: center;
+  width: 100%;
+ background-color: rgb(13, 11, 14);
+
+}
+
+i{
+    font-family: Alata;
+    color:  rgb(199, 188, 186);
+    text-decoration: none;
+    font-style: unset;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+i:hover{
+  background-color: rgb(199, 188, 186);
+  color: rgb(13, 11, 14);
+  transition: 500ms;
+}
+
+li{
+    display: inline;
+    color: rgb(199, 188, 186);
+    padding: 4px;
+    margin: 20px;
+}
+
+
+
+.manager-options-container{
+  position: relative;
+    text-align: center;
+    align-items: center;
+    grid-column: span 12;
+  width: 100%;
+    margin: auto;
+
+
+}
+
+
+
+.outlet-container{
+  width: 100%;
+  grid-column: span 12;
+  z-index: 2;
+
+}
+
+
+

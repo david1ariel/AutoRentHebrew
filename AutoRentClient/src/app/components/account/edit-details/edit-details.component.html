@@ -1,0 +1,114 @@
+<div class="register-container" >
+  <div class="headline">
+    <h1>EDIT ACCOUNT DETAILS</h1>
+  </div>
+  <form #formInfo="ngForm" class="form">
+
+    <div class="table1">
+      <table>
+        <tr>
+          <td>First Name*:</td>
+          <td><input type="text" name="firstname" [(ngModel)]="user.firstName" required>
+          </td>
+        </tr>
+        <tr>
+          <td>Last Name*:</td>
+          <td><input type="text" name="lastName" [(ngModel)]="user.lastName" required>
+          </td>
+        </tr>
+        <tr>
+          <td>Gender*:</td>
+          <td><input type="text" name="gender" [(ngModel)]="user.gender" required>
+          </td>
+        </tr>
+        <tr>
+          <td>ID Number*:</td>
+          <td><input type="text" name="id" [(ngModel)]="user.userId" required>
+          </td>
+        </tr>
+        <tr>
+          <td>Email*:</td>
+          <td><input type="email" name="Email" [(ngModel)]="user.email" required>
+          </td>
+        </tr>
+        <tr>
+          <td>Birth Date:</td>
+          <td><input type="date" name="birsthdate" [(ngModel)]="user.birthDate"></td>
+        </tr>
+        <tr>
+          <td>Username*:</td>
+          <td><input type="text" name="username" [(ngModel)]="user.username" required></td>
+        </tr>
+
+      </table>
+    </div>
+
+
+    <div class="table2">
+      <table>
+        <tr>
+          <td>Password*:</td>
+          <td><input type="password" name="password" [(ngModel)]="user.password" required>
+          </td>
+        </tr>
+        <tr>
+          <td>Country:</td>
+          <td><input type="text" name="country" [(ngModel)]="user.country"></td>
+        </tr>
+        <tr>
+          <td>City:</td>
+          <td><input type="text" name="city" [(ngModel)]="user.city"></td>
+        </tr>
+        <tr>
+          <td>Adress Line:</td>
+          <td><input type="text" name="name" [(ngModel)]="user.adressLine"></td>
+        </tr>
+        <tr>
+          <td>Postal Zip Code:</td>
+          <td><input type="text" name="name" [(ngModel)]="user.postalZipCode"></td>
+        </tr>
+        <tr>
+          <td>Upload Image:</td>
+          <td><input #imageBox type="file" accept="image/*" (change)="displayPreview($event.target.files[0])">
+            <button class="imageButton" type="button" (click)="imageBox.click()">Choose Image...</button>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><img src="{{preview}}" class="preview">
+            <br><br></td>
+        </tr>
+      </table>
+    </div>
+
+
+      <button class="btn btn-success" [disabled]="formInfo.form.invalid" (click)="update(received, error)">Update</button>
+      <button class="btn btn-danger"  (click)="clear()">Clear</button>
+
+  </form>
+
+</div>
+
+<ng-template #error>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>Sorry, some error occured during the proccess. Please try again later.</h4>
+
+    <div>
+      <button class="btn btn-success" (click)="onCloseDialog()">OK</button>
+    </div>
+  </div>
+
+</ng-template>
+
+<ng-template #received>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>Your details have been successfully updated.</h4>
+
+    <div>
+      <button class="btn btn-success" (click)="onCloseDialog()">OK</button>
+    </div>
+  </div>
+
+</ng-template>

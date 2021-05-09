@@ -1,0 +1,31 @@
+<div class="login-container">
+  <div class="headline">
+    <h1>LOGIN</h1>
+  </div>
+  <form #formInfo="ngForm" class="form">
+
+    <div>
+      <table>
+        <tr>
+          <td>Username:</td>
+          <td><input type="text" name="username" [(ngModel)]="credentials.username" required #usernameInfo="ngModel">
+            <span *ngIf="usernameInfo.errors?.required && usernameInfo.touched">Missing username</span></td>
+        </tr>
+
+
+        <tr>
+          <td>Password:</td>
+          <td><input type="password" name="password" [(ngModel)]="credentials.password" required #passwordInfo="ngModel">
+            <span *ngIf="passwordInfo.errors?.required && passwordInfo.touched">Missing password</span>
+          </td>
+        </tr>
+
+      </table>
+    </div>
+
+ <button class="btn-login" [disabled]="formInfo.form.invalid" (click)="login()">LOGIN</button>
+  </form>
+
+
+
+</div>

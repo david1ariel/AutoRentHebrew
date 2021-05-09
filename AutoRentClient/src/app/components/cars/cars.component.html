@@ -1,0 +1,361 @@
+<div class="cars-container" *ngIf="carTypes">
+  <div class="headline">
+    <h1>OUR CARS FLEET:</h1>
+  </div>
+  <div>
+    <table class="available-container">
+      <tr class="tr-head-available">
+        <th></th>
+        <th>
+        </th>
+        <th>
+          Pickup Date:
+        </th>
+        <th>
+          <input class="date-input1" type="date" (ngModelChange)="pickupDateChanged()" [(ngModel)]="pickupDateString"
+            (focus)="changePickupDateToNow()">
+        </th>
+        <th>
+          Return Date:
+        </th>
+        <th>
+          <input class="date-input1" type="date" (ngModelChange)="returnDateChanged()" [(ngModel)]="returnDateString"
+            (focus)="changeReturnDateToNow()">
+        </th>
+        <th>
+          <button class="btn btn-success" [hidden]="available" (click)="showAvailableCars()">Show only available cars</button>
+          <button class="btn btn-success" [hidden]="!available" (click)="showAllCars()">Show All Cars</button>
+        </th>
+        <th></th>
+      </tr>
+    </table>
+    <table>
+      <thead>
+        <tr class="tr-head">
+          <th>Filter By:</th>
+          <th>
+            <select class="exist-car-input" name="manufacturer" (change)="filterByManufacturer($event)">
+              <option value='' disabled selected hidden>Manufaturer</option>
+              <option value='{{m}}' *ngFor="let m of manufacturerFilter; let i = index">{{m}}</option>
+            </select>
+          </th>
+          <th>
+            <select class="exist-car-input" name="model" (change)="filterByModel($event)">
+              <option value='' disabled selected hidden>Model</option>
+              <option value="{{c.model}}" *ngFor="let c of carTypes; let i = index">{{c.model}}</option>
+            </select>
+          </th>
+          <th>
+            <select class="exist-car-input" name="year" (change)="filterByYear($event)">
+              <option value='' disabled selected hidden>Year</option>
+              <option *ngFor="let y of yearFilter; let i = index" value="{{y}}">{{y}}</option>
+            </select>
+          </th>
+          <th>
+            <select class="exist-car-input" name="Gear" (change)="selectedGear($event)">
+              <option value='' disabled selected hidden>Gear</option>
+              <option value='Automatic'>Automatic</option>
+              <option value="Manual">Manual</option>
+            </select>
+          </th>
+          <th>
+            <select class="exist-car-input" name="branch" (change)="filterByBranch($event)">
+              <option value='' disabled selected hidden>Branch</option>
+              <option value="allBranches">All Branches</option>
+              <option *ngFor="let b of branchFilter; let i = index" value="{{b}}">{{b}}</option>
+            </select>
+          </th>
+
+          <th><input [(ngModel)]="searchStr" (ngModelChange)="search()" type="text" placeholder="Enter text to search">
+          </th>
+          <th></th>
+
+        </tr>
+        <tr class="tr-head">
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr class="tr-head">
+          <th>
+
+          </th>
+          <th>Manufacturer</th>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Gear</th>
+          <th>Price Per Day</th>
+          <th>Price Per Day Late</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody *ngIf="carsToShow.length>0">
+        <tr *ngFor="let c of carsToShow">
+          <td><img [src]=c.imageFileName class="car-imgae"></td>
+          <td>{{c.manufacturer}}</td>
+          <td>{{c.model}}</td>
+          <td>{{c.year}}</td>
+          <td>{{c.gear}}</td>
+          <td>{{c.pricePerDay | currency: "ILS"}}</td>
+          <td>{{c.pricePerDayLate | currency: "ILS"}}</td>
+          <td><button class="btn btn-success" (click)="beginRent(c.carTypeId, confirmRent, loggedOut)">RENT</button>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot *ngIf="!carsToShow">
+        <tr>
+          Sorry, but no cars match the requested dates.
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+
+<!-- <div class="cars-container-mobile" *ngIf="carTypes&&windowWidth<576">
+  <div class="headline-mobile">
+    <h1>OUR CARS FLEET:</h1>
+  </div>
+  <div>
+    <table class="table-mobile">
+
+      <thead>
+        <tr (click)="toggleFilters()">filters</tr>
+        <ng-container *ngIf="isShowFilters">
+          <tr class="tr-head" >
+            <th><input [(ngModel)]="available" (ngModelChange)="sendDates()" type="checkbox">&nbsp;&nbsp;Show only
+              available between dates:</th>
+
+            <th>
+              <select class="exist-car-input" name="manufacturer" (change)="filterByManufacturer($event)">
+                <option value='' disabled selected hidden>Manufaturer</option>
+                <option value='{{m}}' *ngFor="let m of manufacturerFilter; let i = index">{{m}}</option>
+              </select>
+            </th>
+            <th>
+              <select class="exist-car-input" name="model" (change)="filterByModel($event)">
+                <option value='' disabled selected hidden>Model</option>
+                <option value="{{c.model}}" *ngFor="let c of carTypes; let i = index">{{c.model}}</option>
+              </select>
+            </th>
+            <th>
+              <select class="exist-car-input" name="year" (change)="filterByYear($event)">
+                <option value='' disabled selected hidden>Year</option>
+                <option *ngFor="let y of yearFilter; let i = index" value="{{y}}">{{y}}</option>
+              </select>
+            </th>
+            <th>
+              <select class="exist-car-input" name="Gear" (change)="selectedGear($event)">
+                <option value='' disabled selected hidden>Gear</option>
+                <option value='Automatic'>Automatic</option>
+                <option value="Manual">Manual</option>
+              </select>
+            </th>
+            <th>
+              <select class="exist-car-input" name="branch" (change)="filterByBranch($event)">
+                <option value='' disabled selected hidden>Branch</option>
+                <option *ngFor="let b of branchFilter; let i = index" value="{{b}}">{{b}}</option>
+              </select>
+            </th>
+
+            <th><input [(ngModel)]="searchStr" (ngModelChange)="search()" type="text" placeholder="Enter text to search">
+            </th>
+            <th></th>
+
+          </tr>
+        </ng-container>
+
+        <tr class="tr-head">
+          <th><input class="date-input1" type="date" [(ngModel)]="pickupDateString" (focus)="changeDateToNow()">
+            <input class="date-input1" type="date" [(ngModel)]="returnDateString" (focus)="changeDateToNow()">
+          </th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr class="tr-head">
+          <th></th>
+          <th>Manufacturer</th>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Gear</th>
+          <th>Price Per Day</th>
+          <th>Price Per Day Late</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody *ngIf="carsToShow.length>0">
+        <tr *ngFor="let c of carsToShow">
+          <td><img [src]=c.imageFileName class="car-imgae"></td>
+          <td>{{c.manufacturer}}</td>
+          <td>{{c.model}}</td>
+          <td>{{c.year}}</td>
+          <td>{{c.gear}}</td>
+          <td>{{c.pricePerDay | currency: "ILS"}}</td>
+          <td>{{c.pricePerDayLate | currency: "ILS"}}</td>
+          <td><button class="btn btn-success" (click)="beginRent(c.carTypeId, confirmRent, loggedOut)">RENT</button>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot *ngIf="!carsToShow">
+        <tr>
+          Sorry, but no cars match the requested dates.
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+
+<div *ngIf="carTypes&&windowWidth>=576" class="recent-container" style="position: fixed; margin: auto; bottom: 34px; z-index: 0; overflow: auto;">
+
+  <img *ngFor="let c of localStorageCarTypes" class="car-img" class="img-storage" [src]=c.imageFileName
+    (click)="enableFullCarTypeDisplay(c, displayFullCarType)">
+
+</div> -->
+
+
+<ng-template #confirmRent>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>Please confirm the following:</h4>
+    <table class="confirm-table">
+      <thead>
+        <tr class="tr-head">
+          <th></th>
+          <th>Manufacturer</th>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Gear</th>
+          <th>Price Per Day</th>
+          <th>Price Per Day Late</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img [src]=chosenCarType.imageFileName class="car-imgae"></td>
+          <td>{{chosenCarType.manufacturer}}</td>
+          <td>{{chosenCarType.model}}</td>
+          <td>{{chosenCarType.year}}</td>
+          <td>{{chosenCarType.gear}}</td>
+          <td>{{chosenCarType.pricePerDay | currency:"ILS"}}</td>
+          <td>{{chosenCarType.pricePerDayLate | currency:"ILS"}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <h5>Pickup Date: <input type="date" (focus)="changePickupDateToNow()" [(ngModel)]="pickupDateString"
+          (change)="pickupDateChanged()">{{this.rent.pickupDate | date}}</h5>
+      <h5>Return Date: <input type="date" (focus)="changeReturnDateToNow()" [(ngModel)]="returnDateString"
+          (change)="returnDateChanged()">{{this.rent.returnDate | date}}</h5>
+      <h5>Total Cost:
+        {{price | currency:"ILS"}}</h5>
+    </div>
+    <div>
+      <h5>Select Branch:</h5>
+      <select class="exist-car-input" name="branch" (change)="checkCarTypesByBranchEvent($event)">
+        <option *ngFor="let b of branchFilter; let i = index" value="{{b}}" [selected]="i===chosenBranchId">{{b}}
+        </option>
+      </select>
+      <label *ngIf="isCarExistInBranch === 1">The car is available in this branch on those dates.</label>
+      <label *ngIf="isCarExistInBranch === -1">sorry, no car of this type is available in this branch on those dates...
+        Please choose another branch.</label>
+    </div>
+    <button class="btn btn-success" (click)="onCloseDialog(); executeRent(received, error)"
+      [disabled]="isCarExistInBranch===-1||isCarExistInBranch===0">CONFIRM</button>
+    <button class="btn btn-danger" (click)="onCloseDialog()">CANCEL</button>
+
+  </div>
+
+</ng-template>
+
+<ng-template #displayFullCarType class="dispaly-car-wrap" style="background-color:  rgb(28, 41, 32);">
+  <div class="dispaly-car-wrap" style="background-color:  rgb(28, 41, 32);">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <table>
+      <thead>
+        <tr class="tr-head">
+          <th></th>
+          <th>Manufacturer</th>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Gear</th>
+          <th>Price Per Day</th>
+          <th>Price Per Day Late</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img [src]=chosenCarType.imageFileName class="car-imgae"></td>
+          <td>{{chosenCarType.manufacturer}}</td>
+          <td>{{chosenCarType.model}}</td>
+          <td>{{chosenCarType.year}}</td>
+          <td>{{chosenCarType.gear}}</td>
+          <td>{{chosenCarType.pricePerDay | currency:"ILS"}}</td>
+          <td>{{chosenCarType.pricePerDayLate | currency:"ILS"}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <label for="">Pickup:</label>
+    <input class="date-input1" type="date" [(ngModel)]="pickupDateString" (focus)="changePickupDateToNow()">
+
+    <label for="">Return:</label>
+    <input class="date-input2" type="date" [(ngModel)]="returnDateString" (focus)="changeReturnDateToNow()">
+
+    <button type="button" class="btn btn-primary"
+      (click)="beginRent(chosenCarType.carTypeId, confirmRent, loggedOut)">Confirm</button>
+
+
+  </div>
+</ng-template>
+
+
+<ng-template #error>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>Sorry, some error occured during the proccess. Please try again later.</h4>
+
+    <div>
+      <button class="btn btn-success" (click)="onCloseDialog()">OK</button>
+    </div>
+  </div>
+
+</ng-template>
+
+<ng-template #received>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>Your order has been received by the system. </h4>
+    <h4> customer service representative will contact you shortly for payment details, VIA this email: {{user.email}}
+    </h4>
+
+    <div>
+      <button class="btn btn-success" (click)="onCloseDialog()">OK</button>
+    </div>
+  </div>
+
+</ng-template>
+
+<ng-template #loggedOut>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>You are not logged in.</h4>
+    <h5>In order to book a car, you need to:</h5>
+    <br>
+    <div>
+      <button class="btn btn-success" (click)="onCloseDialog()" routerLink="/auth/login">LOGIN</button>
+      <button style="float: right;" class="btn btn-success" (click)="onCloseDialog()"
+        routerLink="/auth/register">REGISTER</button>
+    </div>
+  </div>
+
+</ng-template>

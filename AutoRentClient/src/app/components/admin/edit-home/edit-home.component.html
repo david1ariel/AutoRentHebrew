@@ -1,0 +1,53 @@
+<div class="home-container">
+
+  <img class="bgImg" src="{{preview}}" alt="">
+  <div class="uploadImage">
+  <label  for="backgroundFile" (click)="uploadImg.click()">CLICK TO CHOOSE BACKGROUND
+    IMAGE</label><br><br><br>
+  <input type="file" accept="image/jpeg" #uploadImg (change)="displayPreview($event.target.files[0])">
+  </div>
+
+  <div class="update-button">
+    <label routerLink="/rent" class="btn-rent" (click)="UpdateHomeObject()">CLICK TO SAVE CHANGES</label>
+  </div>
+
+  <div class="info-section">
+
+    <div class="contact-details">
+      <h2>CONTACT DETAILS:</h2>
+      <label for="mailingAdress">Adress for mailing: </label><br>
+      <input type="text" name="mailingAdress" [(ngModel)]="home.mailingAdress"
+        placeholder="Enter your mailing adress here"><br><br>
+      <label for="phone">Phone number: </label>
+      <input type="tel" name="phone" [(ngModel)]="home.phone" placeholder="Enter your phone for contact here">
+      <span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+      <label for="fax">fax number: </label>
+      <input type="tel" name="fax" [(ngModel)]="home.fax" placeholder="Enter your fax for contact here"><br><br>
+    </div>
+
+    <div class="opening-hours">
+      <h2>OPENING HOURS:</h2>
+      <label for="sundayToThursdayOpenHour">Enter here your opening hours:</label><br><br>
+      <table>
+        <tr>
+          <td><span>Sunday to thursday: </span></td>
+          <td><input type="time" [(ngModel)]="home.sundayToThursdayOpenHour"
+              placeholder="Sunday to thursday opening hour">
+            <span> - </span>
+            <input type="time" [(ngModel)]="home.sundayToThursdayCloseHour"
+              placeholder="Sunday to thursday Closing hour">
+          </td>
+        </tr>
+        <tr>
+          <td><span>Friday: </span></td>
+          <td><input type="time" [(ngModel)]="home.fridayOpenHour" placeholder="Friday opening hour">
+            <span> - </span>
+            <input type="time" [(ngModel)]="home.fridayCloseHour" placeholder="Friday closing hour">
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+</div>

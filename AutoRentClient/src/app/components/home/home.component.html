@@ -1,0 +1,28 @@
+<div class="home-container" *ngIf="home" >
+
+
+  <div class="info-section">
+
+    <div class="contact-details">
+      <h2>CONTACT DETAILS:</h2>
+      <p>Adress for mailing: {{home.mailingAdress}}</p>
+      <p>Phone number: {{home.phone}} &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;fax: {{home.fax}}</p>
+    </div>
+
+    <div class="opening-hours">
+      <h2>OPENING HOURS:</h2>
+      <table>
+        <tr>
+          <td>Sunday to thursday: </td>
+          <td>{{home.sundayToThursdayOpenHour}} - {{home.sundayToThursdayCloseHour}}</td>
+        </tr>
+        <tr>
+          <td>Friday: </td>
+          <td>{{home.fridayOpenHour}} - {{home.fridayCloseHour}}</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+</div>

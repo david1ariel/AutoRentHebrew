@@ -1,0 +1,28 @@
+
+<div class="books-container">
+  <div class="headline">
+    <h1>RESARVATIONS</h1>
+  </div>
+
+  <br><br>
+  <div *ngIf="rents">
+    <table class="table-container">
+      <thead>
+        <tr class="tr-head">
+          <th>Car Vehicle License Number</th>
+          <th>Book Pickup Date</th>
+          <th>Book Estimated Return Date</th>
+          <th>Book Actual Return Date</th>
+          <th>Final Payment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let r of rents; index as i">
+          <td>{{r.carId}}</td>
+          <td>{{r.pickupDate | date}}</td>
+          <td>{{r.returnDate | date}}</td>
+          <td>{{r.practicalReturnDate | date}}</td>
+          <td>{{r.finalPayment | currency: "ILS"}}</td>
+        </tr>
+      </tbody>
+    </table>

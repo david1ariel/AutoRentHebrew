@@ -1,0 +1,5 @@
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\05 - Rest Api\obj\Release\netcoreapp3.1\win-x64\05 - Rest Api.AssemblyInfoInputs.cache
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\05 - Rest Api\obj\Release\netcoreapp3.1\win-x64\05 - Rest Api.AssemblyInfo.cs
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\05 - Rest Api\obj\Release\netcoreapp3.1\win-x64\05 - Rest Api.csproj.CoreCompileInputs.cache
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\05 - Rest Api\obj\Release\netcoreapp3.1\win-x64\05 - Rest Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\05 - Rest Api\obj\Release\netcoreapp3.1\win-x64\EFCorePluralizer.cs

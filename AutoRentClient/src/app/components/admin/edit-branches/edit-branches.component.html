@@ -1,0 +1,78 @@
+<div class="branches-container">
+  <div class="headline">
+    <h1>BRANCHES MANAGEMENT</h1>
+  <h4>(CLICK ANY PROPERTY TO EDIT)</h4>
+  </div>
+
+
+
+  <div *ngIf="branches" class="table-container">
+    <table >
+      <thead>
+        <tr class="tr-head">
+          <th>Branch Name</th>
+          <th>City</th>
+          <th>Adress Line</th>
+          <th>Postal Zip Code</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr *ngFor="let b of branches; index as i">
+          <td><figure><input type="text" class="exist-branch" [(ngModel)]="b.city"></figure></td>
+          <td><figure><input type="text" class="exist-branch" [(ngModel)]="b.name"></figure></td>
+          <td><figure><input type="text" class="exist-branch" [(ngModel)]="b.adressLine"></figure></td>
+          <td><figure><input type="text" class="exist-branch" [(ngModel)]="b.postalZipCode"></figure></td>
+          <td><figure><button class="btn btn-success" (click)="updateBranch(b)">Update</button></figure></td>
+          <td><figure><button class="btn btn-danger" (click)="deleteBranch(b)">Delete</button></figure></td>
+          <td><figure><button class="btn btn-danger" (click)="reset(b)">Clear</button></figure></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+
+    <h5 class="headline">Add New Branch (You can simply click on the exact place inside the map):</h5>
+    <table >
+<thead>
+
+        <tr class="tr-head">
+          <th>Branch Name*</th>
+          <th>City*</th>
+          <th>Adress Line*</th>
+          <th>Postal Zip Code</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+        <tbody>
+        <tr>
+          <td><input type="text"  [(ngModel)]="branchToAdd.name"></td>
+          <td><input type="text"  [(ngModel)]="branchToAdd.city"></td>
+          <td><input type="text"  [(ngModel)]="branchToAdd.adressLine"></td>
+          <td><input type="text"  [(ngModel)]="branchToAdd.postalZipCode"></td>
+          <td><button class="btn btn-success" (click)="AddBranch()">Add Branch</button></td>
+          <td><button class="btn btn-danger" (click)="clear()">Clear</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <div class="map-container">
+      <span>{{latitude}}</span>
+      <span>{{longitude}}</span>
+      <agm-map [(latitude)]="latitude" [(longitude)]="longitude" [(zoom)]="mapZoom"
+      (mapClick)="markLocation($event)" *ngIf="branches && branches[0]">
+        <agm-marker-cluster *ngFor="let b of branches; index as i">
+          <agm-marker [latitude]="b.latitude" [longitude]="b.longitude" (markerClick)="changeLocationOnMap($event, b)">
+          </agm-marker>
+        </agm-marker-cluster>
+        <agm-marker *ngIf="branchToAddMarker" [latitude]="branchToAdd.latitude" [longitude]="branchToAdd.longitude">
+        </agm-marker>
+      </agm-map>
+    </div>
+
+
+  </div>
+</div>

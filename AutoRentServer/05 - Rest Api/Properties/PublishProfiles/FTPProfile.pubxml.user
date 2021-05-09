@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfu+ZsuTNT0OJpt8sX5/gLQAAAAACAAAAAAAQZgAAAAEAACAAAAAfDkbTfDKzdaa5zYXm/8JVJlD3tIUthe/oQDpN6L4c/AAAAAAOgAAAAAIAACAAAAC78dTf6WzTUO8qxs3h5xevjoUCVR+UZe9RuTIvfLH0jSAAAADz7IxxX08hyGCe5LL1N8BNrpjq3kdWrRh/55G5z14jkkAAAAAKc4CS04sRovtSOakC6+lZFdyDQofmfr1TInpgGyZcBpsejKoWp7v6+8iQZeXaHE+YjvbqO0njNsyup7Y1RD+e</EncryptedPassword>
+    <_PublishTargetUrl>ftp://rentaride.space/htttpdocs</_PublishTargetUrl>
+    <History>True|2021-05-03T21:19:28.6481214Z;False|2021-05-03T23:57:52.2734282+03:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="01 - Data Access Layer.dll">
+      <publishTime>05/03/2021 22:24:03</publishTime>
+    </File>
+    <File Include="01 - Data Access Layer.pdb">
+      <publishTime>05/03/2021 22:24:03</publishTime>
+    </File>
+    <File Include="02 - Business Model Layer.dll">
+      <publishTime>05/03/2021 22:24:04</publishTime>
+    </File>
+    <File Include="02 - Business Model Layer.pdb">
+      <publishTime>05/03/2021 22:24:04</publishTime>
+    </File>
+    <File Include="03 - Business Logic Layer.dll">
+      <publishTime>05/03/2021 22:24:06</publishTime>
+    </File>
+    <File Include="03 - Business Logic Layer.pdb">
+      <publishTime>05/03/2021 22:24:06</publishTime>
+    </File>
+    <File Include="04 - Data Handler.dll">
+      <publishTime>05/03/2021 22:24:07</publishTime>
+    </File>
+    <File Include="04 - Data Handler.pdb">
+      <publishTime>05/03/2021 22:24:07</publishTime>
+    </File>
+    <File Include="05 - Rest Api.deps.json">
+      <publishTime>05/03/2021 23:59:54</publishTime>
+    </File>
+    <File Include="05 - Rest Api.dll">
+      <publishTime>05/03/2021 23:59:42</publishTime>
+    </File>
+    <File Include="05 - Rest Api.exe">
+      <publishTime>05/03/2021 23:59:42</publishTime>
+    </File>
+    <File Include="05 - Rest Api.pdb">
+      <publishTime>05/03/2021 23:59:42</publishTime>
+    </File>
+    <File Include="05 - Rest Api.runtimeconfig.json">
+      <publishTime>05/03/2021 22:24:09</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>01/04/2021 20:57:49</publishTime>
+    </File>
+    <File Include="appsettings.Production.json">
+      <publishTime>05/03/2021 22:16:53</publishTime>
+    </File>
+    <File Include="Azure.Core.dll">
+      <publishTime>10/28/2020 21:37:16</publishTime>
+    </File>
+    <File Include="Azure.Storage.Blobs.dll">
+      <publishTime>11/10/2020 21:49:22</publishTime>
+    </File>
+    <File Include="Azure.Storage.Common.dll">
+      <publishTime>11/10/2020 21:49:02</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Authentication.JwtBearer.dll">
+      <publishTime>09/23/2020 23:12:38</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Http.Features.dll">
+      <publishTime>09/23/2020 23:00:48</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.NodeServices.dll">
+      <publishTime>10/21/2020 00:14:06</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.SpaServices.dll">
+      <publishTime>10/21/2020 00:18:42</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.SpaServices.Extensions.dll">
+      <publishTime>10/21/2020 00:22:28</publishTime>
+    </File>
+    <File Include="Microsoft.Azure.KeyVault.Core.dll">
+      <publishTime>12/07/2016 09:37:44</publishTime>
+    </File>
+    <File Include="Microsoft.Azure.Management.ResourceManager.Fluent.dll">
+      <publishTime>12/02/2020 06:06:28</publishTime>
+    </File>
+    <File Include="Microsoft.Azure.Management.Storage.Fluent.dll">
+      <publishTime>12/02/2020 06:06:32</publishTime>
+    </File>
+    <File Include="Microsoft.Azure.Storage.Blob.dll">
+      <publishTime>08/19/2020 18:23:20</publishTime>
+    </File>
+    <File Include="Microsoft.Azure.Storage.Common.dll">
+      <publishTime>08/19/2020 18:23:18</publishTime>
+    </File>
+    <File Include="Microsoft.Bcl.AsyncInterfaces.dll">
+      <publishTime>04/14/2020 22:39:12</publishTime>
+    </File>
+    <File Include="Microsoft.Bcl.HashCode.dll">
+      <publishTime>11/15/2019 08:38:50</publishTime>
+    </File>
+    <File Include="Microsoft.Data.SqlClient.dll">
+      <publishTime>05/15/2020 23:07:32</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
+      <publishTime>09/23/2020 17:19:02</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.dll">
+      <publishTime>09/23/2020 17:19:34</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Relational.dll">
+      <publishTime>09/23/2020 17:19:40</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.SqlServer.dll">
+      <publishTime>09/23/2020 17:19:44</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Caching.Abstractions.dll">
+      <publishTime>09/23/2020 16:04:22</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Caching.Memory.dll">
+      <publishTime>09/23/2020 16:04:46</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Configuration.Abstractions.dll">
+      <publishTime>10/19/2020 23:52:34</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Configuration.Binder.dll">
+      <publishTime>10/19/2020 23:53:00</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Configuration.dll">
+      <publishTime>10/19/2020 23:52:48</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <publishTime>10/19/2020 23:52:50</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.DependencyInjection.dll">
+      <publishTime>10/19/2020 23:52:36</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.FileProviders.Abstractions.dll">
+      <publishTime>10/19/2020 23:53:14</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.FileProviders.Physical.dll">
+      <publishTime>10/19/2020 23:52:38</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.FileSystemGlobbing.dll">
+      <publishTime>10/19/2020 23:53:40</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Logging.Abstractions.dll">
+      <publishTime>10/19/2020 23:53:38</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Logging.Configuration.dll">
+      <publishTime>10/19/2020 23:55:14</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Logging.Console.dll">
+      <publishTime>10/19/2020 23:55:20</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Logging.dll">
+      <publishTime>10/19/2020 23:53:34</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Options.ConfigurationExtensions.dll">
+      <publishTime>10/19/2020 23:55:12</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Options.dll">
+      <publishTime>10/19/2020 23:52:36</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Primitives.dll">
+      <publishTime>10/19/2020 23:53:10</publishTime>
+    </File>
+    <File Include="Microsoft.Identity.Client.dll">
+      <publishTime>04/29/2019 22:04:14</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Clients.ActiveDirectory.dll">
+      <publishTime>10/19/2018 13:45:52</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.JsonWebTokens.dll">
+      <publishTime>06/24/2019 19:50:38</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Logging.dll">
+      <publishTime>06/24/2019 19:53:26</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.dll">
+      <publishTime>06/24/2019 19:54:24</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.OpenIdConnect.dll">
+      <publishTime>06/24/2019 19:59:32</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Tokens.dll">
+      <publishTime>06/24/2019 19:56:06</publishTime>
+    </File>
+    <File Include="Microsoft.Rest.ClientRuntime.Azure.Authentication.dll">
+      <publishTime>06/22/2020 23:16:50</publishTime>
+    </File>
+    <File Include="Microsoft.Rest.ClientRuntime.Azure.dll">
+      <publishTime>10/26/2018 18:27:48</publishTime>
+    </File>
+    <File Include="Microsoft.Rest.ClientRuntime.dll">
+      <publishTime>02/27/2019 20:49:20</publishTime>
+    </File>
+    <File Include="Newtonsoft.Json.dll">
+      <publishTime>11/09/2019 00:56:44</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll">
+      <publishTime>05/15/2018 13:29:40</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll">
+      <publishTime>05/15/2020 23:07:24</publishTime>
+    </File>
+    <File Include="runtimes/win-arm64/native/sni.dll">
+      <publishTime>07/12/2017 11:24:24</publishTime>
+    </File>
+    <File Include="runtimes/win-x64/native/sni.dll">
+      <publishTime>07/12/2017 11:24:22</publishTime>
+    </File>
+    <File Include="runtimes/win-x86/native/sni.dll">
+      <publishTime>07/12/2017 11:24:22</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll">
+      <publishTime>05/15/2018 13:29:40</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll">
+      <publishTime>05/15/2020 23:07:26</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>05/15/2018 13:29:44</publishTime>
+    </File>
+    <File Include="System.Collections.Immutable.dll">
+      <publishTime>04/14/2020 22:38:40</publishTime>
+    </File>
+    <File Include="System.Configuration.ConfigurationManager.dll">
+      <publishTime>05/15/2018 13:29:38</publishTime>
+    </File>
+    <File Include="System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>04/14/2020 22:48:06</publishTime>
+    </File>
+    <File Include="System.IdentityModel.Tokens.Jwt.dll">
+      <publishTime>06/24/2019 19:49:50</publishTime>
+    </File>
+    <File Include="System.IO.Pipelines.dll">
+      <publishTime>09/23/2020 03:54:04</publishTime>
+    </File>
+    <File Include="System.Runtime.Caching.dll">
+      <publishTime>05/15/2018 13:29:40</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>05/15/2018 13:29:44</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>05/03/2021 23:59:54</publishTime>
+    </File>
+    <File Include="wwwroot/3rdpartylicenses.txt">
+      <publishTime>05/03/2021 22:08:22</publishTime>
+    </File>
+    <File Include="wwwroot/5-es2015.1eff535fbb18d96b818e.js">
+      <publishTime>05/03/2021 22:08:28</publishTime>
+    </File>
+    <File Include="wwwroot/5-es2015.b27f973902ea7429d31b.js">
+      <publishTime>12/29/2020 12:02:52</publishTime>
+    </File>
+    <File Include="wwwroot/5-es5.1eff535fbb18d96b818e.js">
+      <publishTime>05/03/2021 22:08:27</publishTime>
+    </File>
+    <File Include="wwwroot/5-es5.b27f973902ea7429d31b.js">
+      <publishTime>12/29/2020 12:02:52</publishTime>
+    </File>
+    <File Include="wwwroot/6-es2015.04389e747ec7fa273a0c.js">
+      <publishTime>05/03/2021 22:08:30</publishTime>
+    </File>
+    <File Include="wwwroot/6-es2015.96c9d8060f99d5e53f5a.js">
+      <publishTime>12/29/2020 12:02:54</publishTime>
+    </File>
+    <File Include="wwwroot/6-es2015.ae2a82b03ad6b36bf759.js">
+      <publishTime>01/06/2021 19:49:01</publishTime>
+    </File>
+    <File Include="wwwroot/6-es2015.e0adcc9825a15b0e9cc4.js">
+      <publishTime>01/06/2021 18:15:31</publishTime>
+    </File>
+    <File Include="wwwroot/6-es5.04389e747ec7fa273a0c.js">
+      <publishTime>05/03/2021 22:08:30</publishTime>
+    </File>
+    <File Include="wwwroot/6-es5.96c9d8060f99d5e53f5a.js">
+      <publishTime>12/29/2020 12:02:53</publishTime>
+    </File>
+    <File Include="wwwroot/6-es5.ae2a82b03ad6b36bf759.js">
+      <publishTime>01/06/2021 19:49:00</publishTime>
+    </File>
+    <File Include="wwwroot/6-es5.e0adcc9825a15b0e9cc4.js">
+      <publishTime>01/06/2021 18:15:31</publishTime>
+    </File>
+    <File Include="wwwroot/Alata-Regular.e834207edf981b875022.ttf">
+      <publishTime>05/03/2021 22:08:22</publishTime>
+    </File>
+    <File Include="wwwroot/AlfaSlabOne-Regular.f53d46bc54f7a54ecfe4.ttf">
+      <publishTime>05/03/2021 22:08:22</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Alata-Regular.ttf">
+      <publishTime>11/08/2019 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/AlfaSlabOne-Regular.ttf">
+      <publishTime>12/19/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Boogaloo-Regular.ttf">
+      <publishTime>12/19/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/GochiHand-Regular.ttf">
+      <publishTime>10/05/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-Black.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-BlackItalic.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-Bold.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-BoldItalic.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-ExtraBold.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-ExtraBoldItalic.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-ExtraLight.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-ExtraLightItalic.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-Italic.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-Light.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-LightItalic.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-Medium.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-MediumItalic.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-Regular.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-SemiBold.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-SemiBoldItalic.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-Thin.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Montserrat-ThinItalic.ttf">
+      <publishTime>12/13/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/OFL.txt">
+      <publishTime>07/31/2017 13:23:26</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Orbitron-VariableFont_wght.ttf">
+      <publishTime>12/15/2010 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Oswald-VariableFont_wght.ttf">
+      <publishTime>10/17/2020 23:20:12</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/PermanentMarker-Regular.ttf">
+      <publishTime>01/06/2011 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/Ranchers-Regular.ttf">
+      <publishTime>10/17/2020 23:20:12</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/SairaCondensed-Black.ttf">
+      <publishTime>07/31/2017 13:23:26</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/SairaCondensed-Bold.ttf">
+      <publishTime>07/31/2017 13:23:26</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/SairaCondensed-ExtraBold.ttf">
+      <publishTime>07/31/2017 13:23:26</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/SairaCondensed-ExtraLight.ttf">
+      <publishTime>07/31/2017 13:23:26</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/SairaCondensed-Light.ttf">
+      <publishTime>07/31/2017 13:23:26</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/SairaCondensed-Medium.ttf">
+      <publishTime>07/31/2017 13:23:26</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/SairaCondensed-Regular.ttf">
+      <publishTime>07/31/2017 13:23:26</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/SairaCondensed-SemiBold.ttf">
+      <publishTime>07/31/2017 13:23:26</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/SairaCondensed-Thin.ttf">
+      <publishTime>07/31/2017 13:23:26</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/static/Orbitron-Black.ttf">
+      <publishTime>12/15/2010 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/static/Orbitron-Bold.ttf">
+      <publishTime>12/15/2010 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/static/Orbitron-ExtraBold.ttf">
+      <publishTime>12/15/2010 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/static/Orbitron-Medium.ttf">
+      <publishTime>12/15/2010 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/static/Orbitron-Regular.ttf">
+      <publishTime>12/15/2010 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/static/Orbitron-SemiBold.ttf">
+      <publishTime>12/15/2010 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/SuezOne-Regular.ttf">
+      <publishTime>03/31/2016 17:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/fonts/VarelaRound-Regular.ttf">
+      <publishTime>07/12/2011 23:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/285810-128.png">
+      <publishTime>10/25/2020 10:25:32</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/beard.jpg">
+      <publishTime>12/29/2012 21:58:14</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/beard1.jpg">
+      <publishTime>12/16/2020 16:14:42</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/beard3.png">
+      <publishTime>12/16/2020 16:21:22</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/beard4.png">
+      <publishTime>12/16/2020 16:32:11</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/beardNegativ.png">
+      <publishTime>12/16/2020 16:38:58</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/Calendar.png">
+      <publishTime>12/15/2020 00:44:47</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/Calendar2.png">
+      <publishTime>12/15/2020 00:46:08</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/Hamburger_icon-green.png">
+      <publishTime>01/10/2021 23:46:54</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/Hamburger_icon-green.svg">
+      <publishTime>01/10/2021 23:45:41</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/Hamburger_icon.svg.png">
+      <publishTime>01/10/2021 10:43:08</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/iconfinder_arrow-circle-right_1608520.png">
+      <publishTime>10/26/2020 11:36:31</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/icons8-menu-208.png">
+      <publishTime>10/18/2020 00:13:07</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/icons8-menu.svg">
+      <publishTime>10/18/2020 00:17:45</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/icons8-people-in-car-side-view-100.png">
+      <publishTime>10/18/2020 13:56:32</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/language-24px.svg">
+      <publishTime>01/09/2021 22:24:17</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/locationIcon.jpg">
+      <publishTime>12/13/2020 22:28:39</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/locationIcon2.jpg">
+      <publishTime>12/13/2020 22:33:26</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/person-green.png">
+      <publishTime>01/10/2021 23:42:41</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/person.png">
+      <publishTime>01/10/2021 11:06:39</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/world-green.png">
+      <publishTime>01/10/2021 23:39:28</publishTime>
+    </File>
+    <File Include="wwwroot/assets/icons/world.png">
+      <publishTime>01/09/2021 23:49:53</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/carOnRoad.jpg">
+      <publishTime>12/10/2020 14:14:45</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/carOnRoad2.jpg">
+      <publishTime>12/10/2020 14:16:47</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/carOnRoad3.jpg">
+      <publishTime>12/10/2020 14:21:03</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/carOnRoad4.jpg">
+      <publishTime>12/11/2020 01:12:32</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/carOnRoad5.jpg">
+      <publishTime>12/11/2020 01:14:20</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/carOnRoad5Filtered.jpg">
+      <publishTime>12/11/2020 01:16:02</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/locationIcon1.jpg">
+      <publishTime>12/13/2020 22:31:41</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/locationIcon3.jpg">
+      <publishTime>12/13/2020 22:35:10</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/menu.jpg">
+      <publishTime>10/18/2020 07:31:34</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/SaraNorrisWebsite.jpg">
+      <publishTime>12/12/2020 23:16:55</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/SaraNorrisWebsiteCutted.jpg">
+      <publishTime>12/13/2020 00:15:30</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/SaraNorrisWebsiteCutted2.jpg">
+      <publishTime>12/14/2020 23:28:27</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/SaraNorrisWebsiteCutted3.jpg">
+      <publishTime>12/15/2020 23:02:22</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/SaraNorrisWebsiteCutted4.jpg">
+      <publishTime>12/15/2020 23:14:02</publishTime>
+    </File>
+    <File Include="wwwroot/Boogaloo-Regular.c9cf5bab01eaef3e2336.ttf">
+      <publishTime>05/03/2021 22:08:22</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>10/17/2020 22:33:37</publishTime>
+    </File>
+    <File Include="wwwroot/GochiHand-Regular.da5a07a12e5c08afc75b.ttf">
+      <publishTime>05/03/2021 22:08:22</publishTime>
+    </File>
+    <File Include="wwwroot/index.html">
+      <publishTime>05/03/2021 22:09:02</publishTime>
+    </File>
+    <File Include="wwwroot/main-es2015.3ed0f25634a315b30532.js">
+      <publishTime>05/03/2021 22:08:59</publishTime>
+    </File>
+    <File Include="wwwroot/main-es2015.6d48b48c7e2c3ada0751.js">
+      <publishTime>12/29/2020 12:03:04</publishTime>
+    </File>
+    <File Include="wwwroot/main-es5.3ed0f25634a315b30532.js">
+      <publishTime>05/03/2021 22:08:54</publishTime>
+    </File>
+    <File Include="wwwroot/main-es5.6d48b48c7e2c3ada0751.js">
+      <publishTime>12/29/2020 12:03:03</publishTime>
+    </File>
+    <File Include="wwwroot/Montserrat-Bold.079ca05d3ded9bc107ab.ttf">
+      <publishTime>05/03/2021 22:08:22</publishTime>
+    </File>
+    <File Include="wwwroot/Orbitron-Black.cc37f7b52f16fc347815.ttf">
+      <publishTime>05/03/2021 22:08:22</publishTime>
+    </File>
+    <File Include="wwwroot/PermanentMarker-Regular.109a10dca0508e41aa12.ttf">
+      <publishTime>05/03/2021 22:08:22</publishTime>
+    </File>
+    <File Include="wwwroot/polyfills-es2015.c54375f2d5b94b6862f0.js">
+      <publishTime>12/29/2020 12:02:49</publishTime>
+    </File>
+    <File Include="wwwroot/polyfills-es5.f6a4584ffa5cc13401cf.js">
+      <publishTime>12/29/2020 12:02:55</publishTime>
+    </File>
+    <File Include="wwwroot/Ranchers-Regular.7ead7f2d9c2dd9ffb97d.ttf">
+      <publishTime>05/03/2021 22:08:22</publishTime>
+    </File>
+    <File Include="wwwroot/runtime-es2015.13862ec4fe1a66f4fd0c.js">
+      <publishTime>12/29/2020 12:02:49</publishTime>
+    </File>
+    <File Include="wwwroot/runtime-es2015.227e8f740c3f93ea4534.js">
+      <publishTime>01/06/2021 18:15:29</publishTime>
+    </File>
+    <File Include="wwwroot/runtime-es2015.4862680fe89645d05e60.js">
+      <publishTime>01/06/2021 19:48:58</publishTime>
+    </File>
+    <File Include="wwwroot/runtime-es2015.5cffb812d5b6a9c916ed.js">
+      <publishTime>05/03/2021 22:08:25</publishTime>
+    </File>
+    <File Include="wwwroot/runtime-es5.13862ec4fe1a66f4fd0c.js">
+      <publishTime>12/29/2020 12:02:50</publishTime>
+    </File>
+    <File Include="wwwroot/runtime-es5.227e8f740c3f93ea4534.js">
+      <publishTime>01/06/2021 18:15:29</publishTime>
+    </File>
+    <File Include="wwwroot/runtime-es5.4862680fe89645d05e60.js">
+      <publishTime>01/06/2021 19:48:58</publishTime>
+    </File>
+    <File Include="wwwroot/runtime-es5.5cffb812d5b6a9c916ed.js">
+      <publishTime>05/03/2021 22:08:25</publishTime>
+    </File>
+    <File Include="wwwroot/SairaCondensed-Bold.b5e96ff13a80fed0f93d.ttf">
+      <publishTime>05/03/2021 22:08:22</publishTime>
+    </File>
+    <File Include="wwwroot/styles.3a7cb8c6828b94947793.css">
+      <publishTime>05/03/2021 22:08:22</publishTime>
+    </File>
+    <File Include="wwwroot/SuezOne-Regular.7a8a3977ce05cff29c5d.ttf">
+      <publishTime>05/03/2021 22:08:22</publishTime>
+    </File>
+    <File Include="wwwroot/VarelaRound-Regular.3b7ffe17ffd5b4e3c72f.ttf">
+      <publishTime>05/03/2021 22:08:22</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,32 @@
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\04 - Data Handler\bin\Debug\netcoreapp3.1\04 - Data Handler.deps.json
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\04 - Data Handler\bin\Debug\netcoreapp3.1\04 - Data Handler.dll
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\04 - Data Handler\bin\Debug\netcoreapp3.1\04 - Data Handler.pdb
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\04 - Data Handler\bin\Debug\netcoreapp3.1\01 - Data Access Layer.dll
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\04 - Data Handler\bin\Debug\netcoreapp3.1\02 - Business Model Layer.dll
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\04 - Data Handler\bin\Debug\netcoreapp3.1\03 - Business Logic Layer.dll
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\04 - Data Handler\bin\Debug\netcoreapp3.1\03 - Business Logic Layer.pdb
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\04 - Data Handler\bin\Debug\netcoreapp3.1\01 - Data Access Layer.pdb
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\04 - Data Handler\bin\Debug\netcoreapp3.1\02 - Business Model Layer.pdb
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\04 - Data Handler\obj\Debug\netcoreapp3.1\04 - Data Handler.csprojAssemblyReference.cache
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\04 - Data Handler\obj\Debug\netcoreapp3.1\04 - Data Handler.AssemblyInfoInputs.cache
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\04 - Data Handler\obj\Debug\netcoreapp3.1\04 - Data Handler.AssemblyInfo.cs
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\04 - Data Handler\obj\Debug\netcoreapp3.1\04 - Data Handler.csproj.CoreCompileInputs.cache
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\04 - Data Handler\obj\Debug\netcoreapp3.1\04 - Data Handler.csproj.CopyComplete
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\04 - Data Handler\obj\Debug\netcoreapp3.1\04 - Data Handler.dll
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\04 - Data Handler\obj\Debug\netcoreapp3.1\04 - Data Handler.pdb
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\04 - Data Handler\bin\Debug\netcoreapp3.1\04 - Data Handler.deps.json
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\04 - Data Handler\bin\Debug\netcoreapp3.1\04 - Data Handler.dll
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\04 - Data Handler\bin\Debug\netcoreapp3.1\04 - Data Handler.pdb
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\04 - Data Handler\bin\Debug\netcoreapp3.1\01 - Data Access Layer.dll
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\04 - Data Handler\bin\Debug\netcoreapp3.1\02 - Business Model Layer.dll
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\04 - Data Handler\bin\Debug\netcoreapp3.1\03 - Business Logic Layer.dll
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\04 - Data Handler\bin\Debug\netcoreapp3.1\03 - Business Logic Layer.pdb
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\04 - Data Handler\bin\Debug\netcoreapp3.1\01 - Data Access Layer.pdb
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\04 - Data Handler\bin\Debug\netcoreapp3.1\02 - Business Model Layer.pdb
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\04 - Data Handler\obj\Debug\netcoreapp3.1\04 - Data Handler.csprojAssemblyReference.cache
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\04 - Data Handler\obj\Debug\netcoreapp3.1\04 - Data Handler.AssemblyInfoInputs.cache
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\04 - Data Handler\obj\Debug\netcoreapp3.1\04 - Data Handler.AssemblyInfo.cs
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\04 - Data Handler\obj\Debug\netcoreapp3.1\04 - Data Handler.csproj.CoreCompileInputs.cache
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\04 - Data Handler\obj\Debug\netcoreapp3.1\04 - Data Handler.csproj.CopyComplete
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\04 - Data Handler\obj\Debug\netcoreapp3.1\04 - Data Handler.dll
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\04 - Data Handler\obj\Debug\netcoreapp3.1\04 - Data Handler.pdb

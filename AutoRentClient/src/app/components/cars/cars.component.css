@@ -1,0 +1,165 @@
+.cars-container{
+  position: relative;
+    text-align: center;
+}
+
+table, td, th{
+    padding: 6px;
+}
+
+
+
+.available-container{
+  color: rgb(13, 11, 14);
+  background-color: rgb(199, 188, 186);
+}
+
+.headline{
+  font-family: Alata;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 10px;
+  width: 862.4px;
+  background-color: rgb(199, 188, 186);
+}
+
+.headline-mobile{
+  text-align: center;
+  font-family: Alata;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 10px;
+  width: 350px;
+  background-color: rgb(199, 188, 186);
+}
+
+table>*{
+  color:  rgb(199, 188, 186);
+}
+
+.tr-head>*{
+  color: rgb(13, 11, 14);
+  background-color: rgb(199, 188, 186);
+  }
+
+.tr-head-available{
+  background-color: rgb(55, 64, 35);
+  color: whitesmoke;
+  margin: auto;
+}
+
+tbody tr:nth-child(even){
+  background-color: rgb(55, 64, 35);
+}
+
+tbody tr:nth-child(odd){
+  background-color: rgb(28, 41, 32);
+}
+
+
+th{
+  font-family: Alata;
+
+}
+
+h1{
+
+  /* margin: 50px; */
+  font-family: Alata;
+}
+
+td{
+  padding: 15px;
+  min-width: 80px;
+}
+
+.available-container{
+  margin: auto;
+}
+
+table{
+    margin: auto;
+    margin-bottom: 150px;
+}
+
+td :first-child{
+    text-align: left;
+}
+
+.check-avail{
+  cursor: pointer;
+}
+
+.check-avail:hover{
+  background-color: rgb(13, 11, 14);
+  transition: 1s;
+}
+
+img{
+    width: 180px;
+}
+
+.box{
+  background-color:  rgb(199, 188, 186);
+  color:rgb(13, 11, 14);
+  padding: 24px;
+  font-family: Alata;
+  /* position: relative; */
+}
+
+i{
+  cursor: pointer;
+  color:rgb(13, 11, 14);
+}
+
+h4, h5, button{
+  margin: 25px;
+  font-family: Alata;
+
+}
+
+.recent-container{
+  position: fixed;
+  /* width: 200px; */
+  /* height: 500px; */
+  /* top: 666px; */
+  left: 270px;
+  /* float: right; */
+  /* background-color: rgba(199, 188, 186, 0.3); */
+  z-index: 4;
+}
+
+.car-img{
+
+  display: inline;
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+
+.img-storage{
+  opacity: 0.4;
+  border-radius: 50%;
+  /* background-color: red; */
+}
+
+.img-storage:hover{
+  opacity: 1;
+  transition: 300ms;
+}
+
+.dispaly-car-wrap{
+  padding: 24px;
+  background-color: rgb(28, 41, 32);
+}
+
+.mat-dialog-container{
+  padding: 0;
+}
+
+.confirm-table{
+  margin-bottom: 30px;
+}

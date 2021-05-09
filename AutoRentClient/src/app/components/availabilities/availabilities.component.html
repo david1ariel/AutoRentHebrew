@@ -1,0 +1,114 @@
+<div class="books-container">
+  <div class="headline">
+    <h1>RESARVATIONS</h1>
+  </div>
+
+  <br><br>
+  <div *ngIf="rents">
+    <table class="table-container">
+      <thead>
+        <tr class="tr-head">
+
+          <th *ngIf="!isOnlyOneCar">Car Vehicle License Number</th>
+          <th>Book Pickup Date</th>
+          <th>Book Estimated Return Date</th>
+          <th>Book Actual Return Date</th>
+          <th>Final Payment</th>
+          <th>Client Name</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let r of rents; index as i">
+          <td *ngIf="!isOnlyOneCar">{{r.carId}}</td>
+          <td><input type="date" (change)="pickupDateChanged(i)" [(ngModel)]="pickupDateString[i]"></td>
+          <td><input type="date" (change)="returnDateChanged(i)" [(ngModel)]="returnDateString[i]"></td>
+          <td><input type="date" (change)="practicalReturnDateChanged(i)" [(ngModel)]="practicalReturnDateString[i]">
+          </td>
+          <td><input type="number" [(ngModel)]="r.finalPayment"></td>
+          <td (click)="userChanging()">{{r.clientFullName}}</td>
+          <td><button class="btn btn-success" (click)="updateRent(r, updated, error)">UPDATE</button></td>
+          <td><button class="btn btn-danger" (click)="deleteRent(r, deleted, error)">DELETE</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <h4 class="headline">Add New Rent</h4>
+    <table class="table-container">
+      <thead>
+        <tr class="tr-head">
+          <th>Car Vehicle License Number</th>
+          <th>Book Pickup Date</th>
+          <th>Book Estimated Return Date</th>
+          <th>Book Actual Return Date</th>
+          <th>Final Payment</th>
+          <th>Client ID</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" [(ngModel)]="rentToAdd.carId"></td>
+          <td><input type="date" (change)="rentToAddPickupDateChanged()" [(ngModel)]="rentToAddPickupDateString"></td>
+          <td><input type="date" (change)="rentToAddReturnDateChanged()" [(ngModel)]="rentToAddReturnDateString"></td>
+          <td><input type="date" (change)="rentToAddPracticalReturnDateChanged()"
+              [(ngModel)]="rentToAddPracticalReturnDateString">
+          </td>
+          <td><input type="number" [(ngModel)]="rentToAdd.finalPayment"></td>
+          <td><input type="text" [(ngModel)]="rentToAdd.userId"></td>
+          <td><button class="btn btn-success" (click)="addRent(added, error)">UPDATE</button></td>
+          <td><button class="btn btn-danger" (click)="clearAddedRent()">CLEAR</button></td>
+        </tr>
+      </tbody>
+
+
+    </table>
+
+  </div>
+</div>
+
+<ng-template #error>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>Sorry, some error occured during the proccess. Please try again later.</h4>
+    <div>
+      <button class="btn btn-success" (click)="onCloseDialog()">OK</button>
+    </div>
+  </div>
+
+</ng-template>
+
+<ng-template #updated>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>Rent updated successfuly by the system.</h4>
+    <div>
+      <button class="btn btn-success" (click)="onCloseDialog()">OK</button>
+    </div>
+  </div>
+
+</ng-template>
+
+<ng-template #added>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>Rent added successfuly by the system.</h4>
+    <div>
+      <button class="btn btn-success" (click)="onCloseDialog()">OK</button>
+    </div>
+  </div>
+
+</ng-template>
+
+<ng-template #deleted>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>Rent deleted successfuly by the system.</h4>
+    <div>
+      <button class="btn btn-success" (click)="onCloseDialog()">OK</button>
+    </div>
+  </div>
+
+</ng-template>

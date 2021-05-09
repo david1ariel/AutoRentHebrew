@@ -1,0 +1,174 @@
+.header {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+z-index: 2;
+}
+
+.header> .bgImg{
+  vertical-align: top;
+  width: 100%;
+}
+
+
+
+.headline {
+    cursor: pointer;
+    grid-column: span 18;
+    position: relative;
+    color: whitesmoke;
+    padding: 0;
+    margin: 0;
+    font-family: ro;
+    padding-left: 80px;
+}
+
+.auth-container {
+    /* grid-column: span 9; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: whitesmoke;
+    padding: 0;
+    direction: rtl;
+    top: 0;
+    font-family: sans-serif;
+    font-size: larger;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+
+.auth-container > *{
+    text-decoration: none;
+    margin: 6px;
+
+}
+
+.world-img{
+  cursor: pointer;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.menu-img{
+  cursor: pointer;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.inner-menu-container-mobile{
+  background-color: rgb(13, 11, 14);
+  position: absolute;
+  top: 68px;
+  left: 0;
+}
+
+.preson-img{
+  cursor: pointer;
+  width: 17px;
+  position: absolute;
+  top: 10px;
+  right: 40px;
+}
+
+h1 {
+    font-family: Alata;
+    font-size: 50px;
+    color: rgb(13, 11, 14);
+    display: block;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 0px;
+
+}
+
+.h2 {
+  text-align: left;
+  color: rgb(13, 11, 14);
+    /* text-align: center; */
+    font-size: large;
+    font-weight: lighter;
+    display: block;
+    margin-top: 0;
+    padding-left: 50px;
+    position: relative;
+}
+
+.menu-container{
+  grid-column: span 18;
+  background-color: rgb(13, 11, 14);
+}
+
+.menu-item{
+  line-height: 40px;
+  margin: 10px;
+  font-family: Alata;
+  font-size: large;
+  color:rgb(199, 188, 186);
+  text-decoration: none;
+  padding-right: 5px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+nav a:hover{
+  color:  rgb(13, 11, 14);
+  background-color: rgb(199, 188, 186);
+  transition: 500ms
+}
+
+.auth-container .authNav{
+    font-family: Motserrat;
+    color: rgb(13, 11, 14);
+    margin: auto;
+    padding: 15px;
+}
+
+.greetings{
+  font-family: GochiHand;
+  color: rgb(13, 11, 14);
+  margin: auto;
+    padding: 15px;
+}
+
+.auth-container .authNav:hover{
+    background-color: rgb(13, 11, 14);
+    color:  rgb(199, 188, 186);
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.hebrew{
+  margin-right: 20px;
+  font-family: SuezOne;
+  font-size: large;
+  color:rgb(199, 188, 186);
+  float: right;
+  height: 10px;
+  text-decoration: none;
+  line-height: 40px;
+}
+
+
+
+
+
+a{
+  text-decoration-style: none;
+}
+
+.active{
+    text-decoration-style: none;
+}
+
+
+
+

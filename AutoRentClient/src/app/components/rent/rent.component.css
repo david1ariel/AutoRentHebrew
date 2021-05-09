@@ -1,0 +1,201 @@
+.rent-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+    min-width: 1000px;
+}
+
+.rent-container>*{
+  text-align: center;
+}
+
+.dates-container{
+  position: fixed;
+  top: 180;
+  display: grid;
+  grid-template-columns: repeat(2,1);
+  grid-column: span 5;
+  color: rgb(199, 188, 186);
+  font-size: x-large;
+  background-color: rgb(13, 11, 14);
+  margin-left: 50px;
+  padding: 15px;
+  min-width: 350PX;
+
+}
+
+.pickup-container{
+    grid-column: span 1;
+}
+
+.return-container{
+    grid-column: span 1;
+}
+
+.confirm{
+  direction: rtl;
+
+    grid-column: span 2;
+}
+
+img{
+    width: 200px;
+}
+
+td{
+    vertical-align: middle;
+    width: 100px;
+}
+
+th{
+  min-width: 100px;
+}
+
+.available-cars{
+  margin-bottom: 120px;
+}
+
+.headline{
+  text-align: center;
+  font-family: Alata;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 10px;
+  width: 862.4px;
+  background-color: rgb(199, 188, 186);
+}
+
+table>*{
+  color:  rgb(199, 188, 186);
+}
+
+.tr-head>*{
+  color: rgb(13, 11, 14);
+  background-color: rgb(199, 188, 186);
+  }
+
+tbody tr:nth-child(even){
+  background-color: rgb(55, 64, 35);
+}
+
+tbody tr:nth-child(odd){
+  background-color: rgb(28, 41, 32);
+}
+
+table{
+    margin: auto;
+}
+
+
+
+
+.bgImg{
+  position: absolute;
+  width: 100%;
+}
+
+img{
+    width: 180px;
+}
+
+.no-cars{
+  grid-template-columns: repeat(2,1);
+  grid-column: span 5;
+  color: rgb(199, 188, 186);
+  background-color: rgb(13, 11, 14);
+  margin-left: 50px;
+  padding: 15px;
+}
+
+.available-cars{
+  grid-column: span 12;
+  width: fit-content;
+  margin: auto;
+}
+
+.btn btn-success{
+  margin: auto;
+}
+
+.date-input1, .date-input2{
+  /* width: 50PX;
+  background-color: rgb(199, 188, 186); */
+  width: 150px;
+  height: 30px;
+  top: 95px;
+  z-index: 2;
+  font-size: medium;
+}
+
+label{
+  font-size: x-large;
+  color: rgb(199, 188, 186);
+  margin: 20px;
+}
+
+input{
+  background-color: rgb(28, 41, 32);
+  color: rgb(199, 188, 186);
+  margin: 20px;
+}
+
+.box{
+  background-color: rgb(13, 11, 14);
+  color: rgb(199, 188, 186);
+  padding: 24px;
+  font-family: Alata;
+  /* position: relative; */
+}
+
+i{
+  cursor: pointer;
+  color: rgb(199, 188, 186);
+}
+
+h4, h5, button{
+  margin: 25px;
+  font-family: Alata;
+
+}
+
+.recent-container{
+  position: fixed;
+  /* width: 200px; */
+  /* height: 500px; */
+  /* top: 666px; */
+  left: 270px;
+  /* float: right; */
+  /* background-color: rgba(199, 188, 186, 0.3); */
+  z-index: 4;
+}
+
+.car-img{
+
+  display: inline;
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+
+.img-storage{
+  opacity: 0.4;
+  border-radius: 50%;
+  /* background-color: red; */
+}
+
+.img-storage:hover{
+  opacity: 1;
+  transition: 300ms;
+}
+
+.dispaly-car-wrap{
+  padding: 24px;
+  background-color: rgb(28, 41, 32);
+}
+
+.mat-dialog-container{
+  padding: 0;
+}

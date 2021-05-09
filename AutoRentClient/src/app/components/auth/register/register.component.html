@@ -1,0 +1,108 @@
+<div class="register-container" >
+  <div class="headline">
+    <h1>REGISTER</h1>
+  </div>
+  <form #formInfo="ngForm" class="form">
+
+    <div class="table1">
+      <table>
+        <tr>
+          <td>First Name*:</td>
+          <td><input type="text" name="firstname" [(ngModel)]="user.firstName" required pattern="^[A-Z].*$"
+              #firstNameInfo="ngModel" autofocus>
+            <span *ngIf="firstNameInfo.errors?.required && firstNameInfo.touched">Missing first name</span>
+            <span *ngIf="firstNameInfo.errors?.pattern && firstNameInfo.touched">First name must be capitalize</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Last Name*:</td>
+          <td><input type="text" name="lastName" [(ngModel)]="user.lastName" required pattern="^[A-Z].*$"
+              #lastNameInfo="ngModel">
+            <span *ngIf="lastNameInfo.errors?.required && lastNameInfo.touched">Missing last name</span>
+            <span *ngIf="lastNameInfo.errors?.pattern && lastNameInfo.touched">Last name must be capitalize</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Gender*:</td>
+          <td><input type="text" name="gender" [(ngModel)]="user.gender" required pattern="^[A-Z].*$"
+              #genderInfo="ngModel">
+            <span *ngIf="genderInfo.errors?.required && genderInfo.touched">Missing name</span>
+            <span *ngIf="genderInfo.errors?.pattern && genderInfo.touched">Email must be in right format</span>
+          </td>
+        </tr>
+        <tr>
+          <td>ID Number*:</td>
+          <td><input type="text" name="id" [(ngModel)]="user.userId" required pattern="^[0-9]{9}$" #idInfo="ngModel">
+            <span *ngIf="idInfo.errors?.required && idInfo.touched">Missing ID number</span>
+            <span *ngIf="idInfo.errors?.pattern && idInfo.touched">ID must be 9 digits</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Email*:</td>
+          <td><input type="email" name="Email" [(ngModel)]="user.email" required
+               #emailInfo="ngModel">
+            <span *ngIf="emailInfo.errors?.required && emailInfo.touched">Missing email</span>
+            <span *ngIf="emailInfo.errors?.email && emailInfo.touched">Email must be in right format</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Birth Date:</td>
+          <td><input type="date" name="birsthdate" [(ngModel)]="user.birthDate">
+        </tr>
+        <tr>
+          <td>Username*:</td>
+          <td><input type="text" name="username" [(ngModel)]="user.username" required #usernameInfo="ngModel">
+            <span *ngIf="usernameInfo.errors?.required && usernameInfo.touched">Missing username</span>
+        </tr>
+
+      </table>
+    </div>
+
+
+    <div class="table2">
+      <table>
+        <tr>
+          <td>Password*:</td>
+          <td><input type="password" name="password" [(ngModel)]="user.password" required pattern="[0-9a-zA-Z]{6,}"
+              #passwordInfo="ngModel">
+            <span *ngIf="passwordInfo.errors?.required && passwordInfo.touched">Missing password</span>
+            <span *ngIf="passwordInfo.errors?.pattern && passwordInfo.touched">password must be at least 6 charcters -
+              letters or numbers</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Country:</td>
+          <td><input type="text" name="country" [(ngModel)]="user.country"></td>
+        </tr>
+        <tr>
+          <td>City:</td>
+          <td><input type="text" name="city" [(ngModel)]="user.city"></td>
+        </tr>
+        <tr>
+          <td>Adress Line:</td>
+          <td><input type="text" name="name" [(ngModel)]="user.adressLine"></td>
+        </tr>
+        <tr>
+          <td>Postal Zip Code:</td>
+          <td><input type="text" name="name" [(ngModel)]="user.postalZipCode"></td>
+        </tr>
+        <tr>
+          <td>Upload Image:</td>
+          <td><input #imageBox type="file" accept="image/*" (change)="displayPreview($event.target.files[0])">
+            <button class="imageButton" type="button" (click)="imageBox.click()">Choose Image...</button>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><img src="{{preview}}" class="preview">
+            <br><br></td>
+        </tr>
+      </table>
+    </div>
+
+
+      <button class="btn-agree" [disabled]="formInfo.form.invalid" (click)="register()">REGISTER</button>
+
+  </form>
+
+</div>

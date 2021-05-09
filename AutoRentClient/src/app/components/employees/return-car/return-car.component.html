@@ -1,0 +1,105 @@
+<div class="return-car-container">
+
+  <div class="headline" >
+    <h1>RETURN A CAR</h1>
+  </div>
+
+  <form>
+
+    <h3>Please enter vehicle license number:</h3>
+    <input #carId type="text" required >
+
+    <button class="btn btn-primary" (click)="getCurrentRentByCarId(carId.value)">
+      Send
+    </button>
+  </form>
+
+  <br>
+  <ng-container *ngIf="isCarIdSent">
+    <div class="car-type-table">
+      <table>
+            <thead>
+              <tr class="tr-head" style="background-color: rgb(55, 64, 35);">
+                <th></th>
+                <th>Manufacturer</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Gear</th>
+                <th>Price Per Day</th>
+                <th>Price Per Day Late</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img [src]=carTypeRented.imageFileName class="car-imgae" style="width: 120px;"></td>
+                <td>{{carTypeRented.manufacturer}}</td>
+                <td>{{carTypeRented.model}}</td>
+                <td>{{carTypeRented.year}}</td>
+                <td>{{carTypeRented.gear}}</td>
+                <td>{{carTypeRented.pricePerDay | currency:"ILS"}}</td>
+                <td>{{carTypeRented.pricePerDayLate | currency:"ILS"}}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+
+
+
+
+          <div class="table1">
+            <table>
+              <tr>
+                <td>Client Name: </td>
+                <td>{{rentingClient.firstName}} {{rentingClient.lastName}}</td>
+              </tr>
+              <tr>
+                <td>Pickup Date: </td>
+                <td>{{currentRent.pickupDate | date}}</td>
+              </tr>
+              <tr>
+                <td>Estimated Return Date: </td>
+                <td>{{currentRent.returnDate | date}}</td>
+              </tr>
+              <tr>
+                <td>Actual Return Date: </td>
+                <td><input type="date" (change)="practicalReturnDateChanged();" [(ngModel)]="stringPracticalReturnDate"></td>
+                <td><button class="btn btn-success" (click)="calculate()">Caculate Payment</button></td>
+              </tr>
+              <tr>
+                <td>Final Payment:</td>
+                <td>{{currentRent.finalPayment | currency:"ILS"}}</td>
+              </tr>
+
+            </table>
+          </div>
+
+          <button class="btn btn-success" (click)="returnCar(received, error)">RETURN CAR</button>
+          <button class="btn btn-danger" (click)="clearForm()">RETURN ANOTHER CAR</button>
+
+  </ng-container>
+
+
+
+</div>
+
+<ng-template #error>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>Sorry, some error occured during the proccess. Please try again later.</h4>
+    <div>
+      <button class="btn btn-success" (click)="onCloseDialog()">OK</button>
+    </div>
+  </div>
+
+</ng-template>
+
+<ng-template #received>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>Rent updated successfuly by the system.</h4>
+    <div>
+      <button class="btn btn-success" (click)="onCloseDialog()">OK</button>
+    </div>
+  </div>
+
+</ng-template>

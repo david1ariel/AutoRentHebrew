@@ -1,0 +1,40 @@
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\02 - Business Model Layer\bin\Debug\netcoreapp3.1\02 - Business Model Layer.deps.json
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\02 - Business Model Layer\bin\Debug\netcoreapp3.1\02 - Business Model Layer.dll
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\02 - Business Model Layer\bin\Debug\netcoreapp3.1\02 - Business Model Layer.pdb
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\02 - Business Model Layer\bin\Debug\netcoreapp3.1\01 - Data Access Layer.dll
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\02 - Business Model Layer\bin\Debug\netcoreapp3.1\01 - Data Access Layer.pdb
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.csprojAssemblyReference.cache
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.AssemblyInfoInputs.cache
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.AssemblyInfo.cs
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.csproj.CopyComplete
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.dll
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.pdb
+C:\Users\user\OneDrive\Programming studies\Projects\Fifth Project\AutoRent\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.csproj.CoreCompileInputs.cache
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\02 - Business Model Layer\bin\Debug\netcoreapp3.1\02 - Business Model Layer.deps.json
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\02 - Business Model Layer\bin\Debug\netcoreapp3.1\02 - Business Model Layer.dll
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\02 - Business Model Layer\bin\Debug\netcoreapp3.1\02 - Business Model Layer.pdb
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\02 - Business Model Layer\bin\Debug\netcoreapp3.1\01 - Data Access Layer.dll
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\02 - Business Model Layer\bin\Debug\netcoreapp3.1\01 - Data Access Layer.pdb
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.csprojAssemblyReference.cache
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.AssemblyInfoInputs.cache
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.AssemblyInfo.cs
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.csproj.CoreCompileInputs.cache
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.csproj.CopyComplete
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.dll
+C:\Users\user\OneDrive\Programming studies\Projects\Final Project\AutoRentServer\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.pdb
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\02 - Business Model Layer\bin\Debug\netcoreapp3.1\02 - Business Model Layer.deps.json
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\02 - Business Model Layer\bin\Debug\netcoreapp3.1\02 - Business Model Layer.runtimeconfig.json
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\02 - Business Model Layer\bin\Debug\netcoreapp3.1\02 - Business Model Layer.runtimeconfig.dev.json
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\02 - Business Model Layer\bin\Debug\netcoreapp3.1\02 - Business Model Layer.dll
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\02 - Business Model Layer\bin\Debug\netcoreapp3.1\02 - Business Model Layer.pdb
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\02 - Business Model Layer\bin\Debug\netcoreapp3.1\01 - Data Access Layer.dll
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\02 - Business Model Layer\bin\Debug\netcoreapp3.1\01 - Data Access Layer.pdb
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.csprojAssemblyReference.cache
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.AssemblyInfoInputs.cache
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.AssemblyInfo.cs
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.csproj.CoreCompileInputs.cache
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\02 - Business Model Layer\obj\Debug\netcoreapp3.1\EFCorePluralizer.cs
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.csproj.CopyComplete
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.dll
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.pdb
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\02 - Business Model Layer\obj\Debug\netcoreapp3.1\02 - Business Model Layer.genruntimeconfig.cache

@@ -1,0 +1,13 @@
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\04 - Data Handler\bin\Release\netcoreapp3.1\04 - Data Handler.deps.json
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\04 - Data Handler\bin\Release\netcoreapp3.1\04 - Data Handler.runtimeconfig.json
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\04 - Data Handler\bin\Release\netcoreapp3.1\04 - Data Handler.runtimeconfig.dev.json
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\04 - Data Handler\bin\Release\netcoreapp3.1\04 - Data Handler.dll
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\04 - Data Handler\bin\Release\netcoreapp3.1\04 - Data Handler.pdb
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\04 - Data Handler\obj\Release\netcoreapp3.1\04 - Data Handler.csprojAssemblyReference.cache
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\04 - Data Handler\obj\Release\netcoreapp3.1\04 - Data Handler.AssemblyInfoInputs.cache
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\04 - Data Handler\obj\Release\netcoreapp3.1\04 - Data Handler.AssemblyInfo.cs
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\04 - Data Handler\obj\Release\netcoreapp3.1\04 - Data Handler.csproj.CoreCompileInputs.cache
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\04 - Data Handler\obj\Release\netcoreapp3.1\EFCorePluralizer.cs
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\04 - Data Handler\obj\Release\netcoreapp3.1\04 - Data Handler.dll
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\04 - Data Handler\obj\Release\netcoreapp3.1\04 - Data Handler.pdb
+C:\Users\david\OneDrive\Documents\AutoRent\AutoRentServer\Final Project\AutoRentServer\04 - Data Handler\obj\Release\netcoreapp3.1\04 - Data Handler.genruntimeconfig.cache

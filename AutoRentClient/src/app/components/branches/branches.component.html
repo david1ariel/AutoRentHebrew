@@ -1,0 +1,41 @@
+
+<div class="branches-container">
+    <div class="headline">
+      <h1>OUR BRANCHES</h1>
+    </div>
+
+    <span class="button" (click)="showUserLocation()">Back To My Location</span>
+<br><br>
+    <div *ngIf="branches">
+        <table class="table-container">
+            <thead>
+                <tr class="tr-head">
+                    <th>Branch Name</th>
+                    <th>Adress</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let b of branches; index as i">
+                    <td>{{b.name}}</td>
+                    <td>{{b.city}}, {{b.adressLine}}</td>
+                    <td><span class="button" (click)="changeLocationOnMap(b)"><img class="location-icon" src="./../../../assets/icons/locationIcon.jpg" alt=""></span></td>
+
+                </tr>
+            </tbody>
+        </table>
+        <br>
+
+        <div class="map" #map *ngIf="branches && branches[0]">
+            <agm-map [(latitude)]="latitude" [(longitude)]="longitude" [(zoom)]="mapZoom" *ngIf="isOnInit">
+                <agm-marker [latitude]="userLat" [longitude]="userLng">
+                </agm-marker>
+                <agm-marker-cluster *ngFor="let b of branches; index as i">
+                    <agm-marker [latitude]="b.latitude" [longitude]="b.longitude"
+                        (markerClick)="changeLocationOnMap(b)">
+                    </agm-marker>
+                </agm-marker-cluster>
+            </agm-map>
+        </div>
+    </div>
+</div>

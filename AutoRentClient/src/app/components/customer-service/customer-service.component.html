@@ -1,0 +1,51 @@
+<div class="customer-container">
+
+
+
+
+  <form class="form">
+    <div class="headline">
+      <h1>CUSTOMER SERVICE</h1>
+      <h5>Notice: This section is yet in development.</h5>
+    </div>
+    <div class="table1">
+      <table>
+        <tr>
+          <td>First Name*:</td>
+          <td><input type="text" name="firstname" required autofocus></td>
+        </tr>
+        <tr>
+          <td>Last Name*:</td>
+          <td><input type="text" name="lastName" required></td>
+        </tr>
+        <tr>
+          <td>Email*:</td>
+          <td><input type="email" name="Email" required></td>
+        </tr>
+        <tr>
+          <td>Phone Number*:</td>
+          <td><input type="tel" name="phone" required></td>
+        </tr>
+        <tr>
+          <td>Response Method*:</td>
+          <td>
+            <select name="responseMethod" required>
+              <option value='' disabled selected hidden>Select</option>
+            <option value="email">Email</option>
+            <option value="phone">Phone</option></select>
+          </td>
+        </tr>
+        <tr>
+          <td>Message Text*:</td>
+          <td><textarea name="message" cols="30" rows="6"></textarea></td>
+        </tr>
+
+      </table>
+    </div>
+
+
+    <button class="btn-agree" (click)="send()">SEND</button>
+
+  </form>
+
+</div>

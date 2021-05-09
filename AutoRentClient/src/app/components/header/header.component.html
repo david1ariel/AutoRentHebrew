@@ -1,0 +1,96 @@
+<div class="header">
+
+
+  <div class="headline" #headline routerLink="/home" >
+    <h1 #h1>CAR RENTAL</h1>
+    <p class="h2" #h2>EXACTLY WHAT YOU NEED FOR YOUR TRAVEL</p>
+  </div>
+
+
+
+  <div class="auth-container" *ngIf="windowWidth>576">
+
+    <span class="greetings">{{greetings}}</span>
+    <a *ngIf="!user" routerLink="/auth/login" class="authNav">LOGIN</a>
+    <a *ngIf="!user" routerLink="/auth/register" class="authNav">REGISTER</a>
+
+    <!-- only if user is logged in -->
+
+    <a *ngIf="user" routerLink="/account/dashboard" class="authNav">PERSONAL ACCOUNT</a>
+    <a *ngIf="user" class="authNav" (click)="logout()">LOGOUT</a>
+  </div>
+
+  <div class="auth-container-mobile" *ngIf="windowWidth<=576">
+    <img class="preson-img" src="./../../../assets/icons/person-green.png" alt="">
+
+    <div>
+
+    </div>
+  </div>
+
+  <div class="language-container-mobile" *ngIf="windowWidth<=576">
+    <img class="world-img" src="./../../../assets/icons/world-green.png" alt="">
+
+    <div>
+
+    </div>
+  </div>
+
+  <div class="menu-container-mobile"  *ngIf="windowWidth<=576">
+    <img (click)="toggleMenu()" #menuImage class="menu-img" src="./../../../assets/icons/Hamburger_icon-green.png" alt="">
+
+    <div class="inner-menu-container-mobile" *ngIf="isShowMenu && windowWidth<=576">
+      <div class="menu-item" routerLink="/cars">
+        <a>Cars Fleet</a>
+      </div>
+
+      <div class="menu-item" routerLink="/branches">
+        <a>Branches</a>
+      </div>
+
+
+      <div class="menu-item" routerLink="/customer-service">
+        <a>Customer Service</a>
+      </div>
+
+
+      <div class="menu-item" routerLink="/about">
+        <a>About</a>
+      </div>
+
+
+      <!-- only if user is employee -->
+      <div class="menu-item" routerLink="/employees/return-car">
+        <a>Return a Car</a>
+      </div>
+
+
+      <!-- only if user is manager -->
+      <div class="menu-item" routerLink="/admin/dashboard">
+        <a>Manager</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-container" *ngIf="windowWidth>576">
+    <nav>
+      <!-- <a class="menu-item" (click)="refresh()">Rent a Car</a> -->
+      <a routerLink="/cars" class="menu-item">Cars Fleet</a>
+      <a routerLink="/branches" class="menu-item">Branches</a>
+      <a routerLink="/customer-service" class="menu-item">Contact Us</a>
+      <a routerLink="/about" class="menu-item">About</a>
+
+      <!-- only if user is employee -->
+      <a *ngIf="user?.role==='employee'||user?.role==='manager'" routerLink="/employees/return-car"
+        class="menu-item">Return a Car</a>
+
+      <!-- only if user is manager -->
+      <a *ngIf="user?.role==='manager'" routerLink="/admin/dashboard" class="menu-item">Manager</a>
+
+      <a routerLink="" class="menu-item" class="hebrew" (click)="toggleHebrew()">עברית</a>
+    </nav>
+
+  </div>
+
+
+</div>

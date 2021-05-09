@@ -1,0 +1,199 @@
+<!-- <img class="bgImg" src="{{home.backgroundImageFileName}}" alt=""> -->
+
+<div class="rent-container">
+
+
+  <div class="dates-container" *ngIf="!confirmed">
+    <div class="pickup-container">
+      <label for="">Pickup:</label>
+      <hr>
+      <input class="date-input1" type="date" [(ngModel)]="pickupDateString" (focus)="changeDateToNow()">
+
+    </div>
+
+    <div class="return-container">
+      <label for="">Return:</label>
+      <hr>
+      <input class="date-input2" type="date" [(ngModel)]="returnDateString">
+    </div>
+    <br>
+    <div class="confirm">
+      <button type="button" class="btn btn-primary" (click)="sendDates()">Check Dates</button>
+    </div>
+
+    <div *ngIf="availableCars?.length===0 && confirmed" class="no-cars">
+      <p> We are very sorry, but no available cars found on requested dates.</p>
+    </div>
+
+  </div>
+
+  <div class="available-cars" *ngIf="availableCars && confirmed">
+    <div class="headline">
+      <h1>AVAILABLE CARS:</h1>
+    </div>
+    <table>
+      <thead>
+        <tr class="tr-head">
+          <th></th>
+          <th>Manufacturer</th>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Gear</th>
+          <th>Price Per Day</th>
+          <th>Price Per Day Late</th>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of availableCars">
+          <td><img [src]=c.imageFileName class="car-imgae"></td>
+          <td>{{c.manufacturer}}</td>
+          <td>{{c.model}}</td>
+          <td>{{c.year}}</td>
+          <td>{{c.gear}}</td>
+          <td>{{c.pricePerDay}}</td>
+          <td>{{c.pricePerDayLate}}</td>
+          <td><button class="btn btn-success" (click)="confirm(c.carTypeId, confirmRent, loggedOut)">Rent</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br><br><br><br><br><br><br><br><br>
+</div>
+
+<div *ngIf="confirm" class="recent-container"
+  style="position: fixed; margin: auto; bottom: 34px; z-index: 0; overflow: auto;">
+
+    <img *ngFor="let c of localStorageCarTypes" class="car-img" class="img-storage" [src]=c.imageFileName (click)="enableFullCarTypeDisplay(c, displayFullCarType)">
+
+</div>
+
+
+<ng-template #confirmRent>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>Please confirm the following:</h4>
+
+    <table>
+      <thead>
+        <tr class="tr-head">
+          <th></th>
+          <th>Manufacturer</th>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Gear</th>
+          <th>Price Per Day</th>
+          <th>Price Per Day Late</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img [src]=chosenCarType.imageFileName class="car-imgae"></td>
+          <td>{{chosenCarType.manufacturer}}</td>
+          <td>{{chosenCarType.model}}</td>
+          <td>{{chosenCarType.year}}</td>
+          <td>{{chosenCarType.gear}}</td>
+          <td>{{chosenCarType.pricePerDay | currency:"ILS"}}</td>
+          <td>{{chosenCarType.pricePerDayLate | currency:"ILS"}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+
+    <div>
+      <h5>Pickup Date: {{this.rent.pickupDate | date}}</h5>
+      <h5>Return Date: {{this.rent.returnDate | date}}</h5>
+      <h5>Total Cost:
+        {{((this.rent.returnDate.valueOf()-this.rent.pickupDate.valueOf())/1000/60/60/24)*this.chosenCarType.pricePerDay
+        | currency:"ILS"}}</h5>
+
+      <button class="btn btn-success"
+        (click)="onCloseDialog();Rent(chosenCarType.carTypeId, received, error)">CONFIRM</button>
+      <button class="btn btn-danger" (click)="onCloseDialog()">CANCEL</button>
+    </div>
+  </div>
+
+</ng-template>
+
+<ng-template #displayFullCarType class="dispaly-car-wrap" style="background-color:  rgb(28, 41, 32);">
+  <div class="dispaly-car-wrap" style="background-color:  rgb(28, 41, 32);">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <table>
+      <thead>
+        <tr class="tr-head">
+          <th></th>
+          <th>Manufacturer</th>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Gear</th>
+          <th>Price Per Day</th>
+          <th>Price Per Day Late</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img [src]=chosenCarType.imageFileName class="car-imgae"></td>
+          <td>{{chosenCarType.manufacturer}}</td>
+          <td>{{chosenCarType.model}}</td>
+          <td>{{chosenCarType.year}}</td>
+          <td>{{chosenCarType.gear}}</td>
+          <td>{{chosenCarType.pricePerDay | currency:"ILS"}}</td>
+          <td>{{chosenCarType.pricePerDayLate | currency:"ILS"}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <label for="">Pickup:</label>
+    <input class="date-input1" type="date" [(ngModel)]="pickupDateString" (focus)="changeDateToNow()">
+
+    <label for="">Return:</label>
+    <input class="date-input2" type="date" [(ngModel)]="returnDateString">
+
+      <button type="button" class="btn btn-primary" (click)="confirm(chosenCarType.carTypeId, confirmRent, loggedOut)">Confirm</button>
+
+
+  </div>
+</ng-template>
+
+
+<ng-template #error>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>Sorry, some error occured during the proccess. Please try again later.</h4>
+
+    <div>
+      <button class="btn btn-success" (click)="onCloseDialog()">OK</button>
+    </div>
+  </div>
+
+</ng-template>
+
+<ng-template #received>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>Your order has been received by the system. </h4>
+    <h4> customer service representative will contact you shortly for payment details, VIA this email: {{user.email}}
+    </h4>
+
+    <div>
+      <button class="btn btn-success" (click)="onCloseDialog()">OK</button>
+    </div>
+  </div>
+
+</ng-template>
+
+<ng-template #loggedOut>
+  <div class="box">
+    <i class="material-icons icon-close" (click)="onCloseDialog()">close</i>
+    <h4>You are not logged in.</h4>
+    <h5>In order to book a car, you need to:</h5>
+    <br>
+    <div>
+      <button class="btn btn-success" (click)="onCloseDialog()" routerLink="/auth/login">LOGIN</button>
+      <button style="float: right;" class="btn btn-success" (click)="onCloseDialog()"
+        routerLink="/auth/register">REGISTER</button>
+    </div>
+  </div>
+
+</ng-template>

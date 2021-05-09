@@ -1,0 +1,120 @@
+
+
+.return-car-container{
+  position: relative;
+  box-sizing: border-box;
+  font-family: Alata;
+  width: 1000px;
+  min-height: 500px;
+  min-width: 600px;
+  background-color: rgb(199, 188, 186);
+  margin: auto;
+  margin-top: 40px;
+  color:  rgb(13, 11, 14);
+  padding: 20px;
+}
+
+button{
+  margin-left: 25px;
+}
+
+.register-container>*{
+  padding: 30px;
+  background-color: rgb(13, 11, 14);
+}
+
+.car-type-table>*{
+  width: 100%;
+  background-color:  rgb(28, 41, 32);
+  color: rgb(199, 188, 186);
+}
+
+
+
+
+
+.register-container>*{
+  color: rgb(199, 188, 186);
+}
+
+.form{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+}
+
+.headline{
+grid-column: span 8;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.table1{
+  display: inline;
+  grid-column: span 4;
+}
+
+.table2{
+  display: inline;
+  grid-column: span 4;
+}
+
+td{
+  font-size: large;
+  width: fit-content;
+  margin-right: 40px;
+  padding: 20px;
+}
+
+input[type=text], input[type=date], input[type=email], input[type=password]{
+  border-radius: 8px;
+  width: 200px;
+  background-color: rgb(199, 188, 186);
+  color: rgb(13, 11, 14);
+
+}
+
+input[type="file"] {
+  display: none;
+}
+
+
+span{
+  color: rgb(199, 188, 186);
+}
+
+.preview{
+
+  max-height: 200px;
+
+  max-width: 160px;
+
+}
+
+input[type="checkbox"] {
+
+  grid-column: span 1;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 15px;
+  margin-left: 0;
+}
+
+span{
+  margin: 10px;
+  background-color: rgb(150, 55, 38);
+  color:rgb(199, 188, 186);
+}
+
+
+
+
+
+img .car-image{
+  width: 120;
+}
+
+tr .tr-head{
+  background-color: rgb(55, 64, 35);
+}

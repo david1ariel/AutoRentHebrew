@@ -1,0 +1,63 @@
+
+
+.headline{
+font-family: Alata;
+margin: auto;
+margin-top: 40px;
+margin-bottom: 40px;
+padding: 10px;
+width: 1000px;
+background-color: rgb(199, 188, 186);
+}
+
+input{
+  background-color: inherit;
+  color: rgb(199, 188, 186);
+  width: 120px;
+}
+
+input:focus{
+  width: fit-content;
+}
+
+table>*{
+color:  rgb(199, 188, 186);
+}
+
+.tr-head>*{
+color: rgb(13, 11, 14);
+background-color: rgb(199, 188, 186);
+}
+
+tbody tr:nth-child(even){
+background-color: rgb(55, 64, 35);
+}
+
+tbody tr:nth-child(odd){
+background-color: rgb(28, 41, 32);
+}
+
+table, td, th{
+  padding: 6px;
+}
+
+th{
+font-family: Alata;
+}
+
+table{
+width: 80%;
+  margin: auto;
+}
+
+
+
+
+
+
+
+button{
+  cursor: pointer;
+}
+
+

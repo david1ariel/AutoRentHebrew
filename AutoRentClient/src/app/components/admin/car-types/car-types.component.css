@@ -1,0 +1,123 @@
+.cars-container{
+  width: 80%;
+  margin: auto;
+}
+
+table{
+    margin: auto;
+    width: 1000px;
+    margin-bottom: 40px;
+}
+
+td, th{
+  border: none;
+  padding: 0;
+  width: 120px;
+  max-width: 120px;
+  text-align: center;
+}
+
+th{
+  color:  rgb(13, 11, 14);
+}
+
+ tr, tr input{
+  /* background-color: rgb(28, 41, 32); */
+  color:  rgb(199, 188, 186);
+}
+
+.tr-head>*{
+  background-color: rgb(199, 188, 186);
+}
+
+.tr-head{
+
+  margin: auto;
+}
+
+.tr-add-car td{
+  height: 60px;
+}
+
+input, select{
+    /* margin-top: 10%; */
+    /* height: 70px; */
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+    background-color: inherit;
+}
+
+input[type="radio"]{
+  display: inline;
+}
+
+.exist-car-input{
+  border: none;
+  background-color: inherit;
+  color: rgb(199, 188, 186);
+}
+
+.file-input{
+    display: none;
+}
+
+img{
+    width: 120px;
+    cursor: pointer;
+}
+
+/* figure{
+  margin: 0;
+  height: 100%;
+  padding: 0;
+  cursor: pointer;
+  background-color: inherit;
+} */
+
+.headline{
+  font-family: Alata;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 10px;
+  color:  rgb(13, 11, 14);
+  width: 1000px;
+  background-color: rgb(199, 188, 186);
+}
+
+table,tr{
+  display: table;
+}
+
+.tr-manage{
+  width: 1000px;
+  display: table-row;
+  /* background-color: rgb(55, 64, 35); */
+  cursor: pointer;
+}
+
+.tr-manage::after, .tr-manage::before{
+  content: ' \25BC';
+}
+
+.no-cars{
+  width: 100%;
+  font-size: large;
+}
+
+tr, tr input{
+  /* background-color: rgb(28, 41, 32); */
+  color:  rgb(199, 188, 186);
+}
+
+
+
+tr .tr-manage{
+  background-color: rgb(55, 64, 35);
+}
+
+tr .tr-main{
+  background-color: rgb(28, 41, 32);
+}
+
